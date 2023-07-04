@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IronStats
   m_EditorClassIdentifier: 
   maxHealth: 7
-  maxMana: 0
+  maxMana: -7
   maxStamina: 3
   maxEnergy: 0
   maxMagic: 0
