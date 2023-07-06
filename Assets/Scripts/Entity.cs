@@ -17,6 +17,16 @@ public class Entity : MonoBehaviour
     public int currentMagic;
 
     // ATTRIBUTE VALUES
+    public int strength;
+    public int dexterity;
+    public int constitution;
+    public int intelligence;
+    public int wisdom;
+    public int focus;
+    public int charisma;
+    public int luck;
+    public int mind;
+
 
     public Inventory entityInventory;
     // Start is called before the first frame update
