@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    public int playerMaxHealth;
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Player : Entity
     // Update is called once per frame
     void Update()
     {
-        playerMaxHealth = CalculatePlayerMaxHealthFromWeapon();
+        this.maxHealth = CalculatePlayerMaxHealthFromWeapon();
     }
 
     public int CalculatePlayerMaxHealthFromWeapon()

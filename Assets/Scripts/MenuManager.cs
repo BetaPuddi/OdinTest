@@ -19,6 +19,6 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
 
-        text.text = player.playerMaxHealth.ToString();
+        text.text = player.maxHealth.ToString();
     }
 }
