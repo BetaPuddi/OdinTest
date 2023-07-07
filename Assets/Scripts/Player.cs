@@ -22,11 +22,11 @@ public class Player : Entity
     public int CalculatePlayerMaxHealthFromWeapons()
     {
         int total = 0;
-        if (Object.ReferenceEquals(null, this.entityInventory.equippedWeaponRight))
+        if (UnityEngine.Object.ReferenceEquals(null, this.entityInventory.equippedWeaponRight))
         {
             total = this.entityInventory.equippedWeaponRight.CalculateMaterialStats() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStats();
         }
-        if (Object.ReferenceEquals(null, this.entityInventory.equippedWeaponLeft))
+        if (UnityEngine.Object.ReferenceEquals(null, this.entityInventory.equippedWeaponLeft))
         {
             total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats();
         }
