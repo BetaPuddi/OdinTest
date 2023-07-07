@@ -21,8 +21,14 @@ public class Player : Entity
     public int CalculatePlayerMaxHealthFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialStats() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStats();
-        total += (this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats()) ?? 0;
+        if (this.entityInventory.equippedWeaponLeft != null)
+        {
+            total = this.entityInventory.equippedWeaponRight.CalculateMaterialStats() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStats();
+        }
+        if (this.entityInventory.equippedWeaponRight != null)
+        {
+            total += (this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats());
+        }
         return total;
     }
 }
