@@ -9,7 +9,7 @@ public class DefinedWeapon : WeaponBase
     public int weaponTypeMaxHealth;
     public int materialsMaxHealth;
 
-    private void Awake()
+    private void OnEnable()
     {
         materialsMaxHealth = CalculateMaterialStats();
         weaponTypeMaxHealth = CalculateWeaponTypeStats();
