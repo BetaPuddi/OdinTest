@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "OdinTest/AttackAndDefValues")]
+[CreateAssetMenu(filename = "AttackAndDefValues", menuName = "Attributes and Stats/AttackAndDefValues")]
 public class AttackAndDefValues : ScriptableObject
 {
     public int attackValue;
