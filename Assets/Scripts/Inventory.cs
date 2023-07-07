@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory
+public class Inventory : MonoBehaviour
 {
     public DefinedWeapon equippedWeaponRight = null;
     public DefinedWeapon equippedWeaponLeft = null;
