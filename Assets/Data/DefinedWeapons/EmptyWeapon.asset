@@ -14,16 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: 
   description: 
-  weaponType: []
+  weaponType:
+  - {fileID: 11400000, guid: 153e533c893adeb4c84b2b174855b695, type: 2}
   range: 
   value: 0
-  materials: []
-  damageTypes: []
-  elements: []
-  attributeValues: {fileID: 0}
-  statValues: {fileID: 0}
+  materials:
+  - {fileID: 11400000, guid: 0d38fc987b9ef3644a613f991ff86d88, type: 2}
+  damageTypes:
+  - {fileID: 11400000, guid: 58f85deb7bb02064abf5d93823ef6cbf, type: 2}
+  elements:
+  - {fileID: 11400000, guid: ec1fc60e8b2fcc440a48816093b974ab, type: 2}
+  attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
+  statValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
   passives: []
-  attackReplacement: {fileID: 0}
+  attackReplacement: {fileID: 11400000, guid: 1550d822205236846bfa5d7a239f90eb, type: 2}
   totalMaxHealth: 0
   weaponTypeMaxHealth: 0
   materialsMaxHealth: 0

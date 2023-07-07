@@ -21,10 +21,10 @@ MonoBehaviour:
   materials: []
   damageTypes: []
   elements: []
-  attributeValues: {fileID: 0}
-  statValues: {fileID: 0}
+  attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
+  statValues: {fileID: 11400000, guid: ed042a6de0ff2854fab7c04b26fc229c, type: 2}
   passives: []
-  attackReplacement: {fileID: 0}
+  attackReplacement: {fileID: 11400000, guid: 97cea7398bdc7a34197150be7d51df26, type: 2}
   totalMaxHealth: 0
   weaponTypeMaxHealth: 0
   materialsMaxHealth: 0

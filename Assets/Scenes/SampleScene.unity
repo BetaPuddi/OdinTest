@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equippedWeaponRight: {fileID: 11400000, guid: 82ce8d609b0647740af27d61d5d05d8f, type: 2}
-  equippedWeaponLeft: {fileID: 0}
+  equippedWeaponLeft: {fileID: 11400000, guid: 47e0ba03b8207154bbd67711802e0568, type: 2}
 --- !u!114 &388755539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +307,7 @@ MonoBehaviour:
   charisma: 0
   luck: 0
   mind: 0
+  entityInventory: {fileID: 0}
 --- !u!1 &425924449
 GameObject:
   m_ObjectHideFlags: 0

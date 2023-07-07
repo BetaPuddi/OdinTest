@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EmptyWeaponType
   m_EditorClassIdentifier: 
   typeName: 
-  weaponTypeStatValues: {fileID: 0}
+  weaponTypeStatValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
