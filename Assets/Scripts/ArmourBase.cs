@@ -8,4 +8,8 @@ public class ArmourBase : ScriptableObject
     public string armourDescription;
     public ArmourType armourType;
     public int armourPrice;
+
+    public ComponentMaterial[] materials;
+    public DamageType[] damageTypes;
+    public ElementType[] elements;
 }
