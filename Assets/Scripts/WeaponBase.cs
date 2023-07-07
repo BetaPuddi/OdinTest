@@ -11,15 +11,15 @@ public abstract class WeaponBase : ScriptableObject
     public string description;
 
     //Type of the weapon
-	public WeaponType[] weaponType;
+    public WeaponType[] weaponType;
     //Range of the weapon - Close, Mid, Long
     public string range;
 
     //How much the weapon costs
-    public int value;
+    public int weaponPrice;
 
     //What the weapon is made of
-	public ComponentMaterial[] materials;
+    public ComponentMaterial[] materials;
     //Damage types of the weapon - Physical, Magical, Ethereal
     public DamageType[] damageTypes;
     //Element types of the weapon
