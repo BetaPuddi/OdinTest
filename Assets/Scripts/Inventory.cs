@@ -6,6 +6,11 @@ public class Inventory : MonoBehaviour
 {
     public DefinedWeapon equippedWeaponRight = null;
     public DefinedWeapon equippedWeaponLeft = null;
+    public DefinedHeadArmour equippedHeadArmour = null;
+    public DefinedChestArmour equippedChestArmour = null;
+    public DefinedHandArmour equippedHandArmour = null;
+    public DefinedLegArmour equippedLegArmour = null;
+    public DefinedFootArmour equippedFootArmour = null;
 
     // Start is called before the first frame update
     void Start()
