@@ -15,13 +15,14 @@ public class Player : Entity
     // Update is called once per frame
     void Update()
     {
-        this.maxHealth = CalculatePlayerMaxHealthFromWeapon();
+        this.maxHealth = CalculatePlayerMaxHealthFromWeapons();
     }
 
-    public int CalculatePlayerMaxHealthFromWeapon()
+    public int CalculatePlayerMaxHealthFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeapon.CalculateMaterialStats() + this.entityInventory.equippedWeapon.CalculateWeaponTypeStats();
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialStats() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStats();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats();
         return total;
     }
 }
