@@ -24,6 +24,8 @@ public abstract class WeaponBase : ScriptableObject
     public DamageType[] damageTypes;
     //Element types of the weapon
     public ElementType[] elements;
+    //The attack and defense values of the weapon
+    public AttackAndDefValues attackAndDefValues;
     //Attribute values of the weapon - Strength, Dexterity etc
     public AttributeValues attributeValues;
     //Stat values of the weapon - Attack, Defense, Speed, etc
