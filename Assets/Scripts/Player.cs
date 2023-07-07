@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,11 +22,11 @@ public class Player : Entity
     public int CalculatePlayerMaxHealthFromWeapons()
     {
         int total = 0;
-        if (this.entityInventory.equippedWeaponLeft != null)
+        if (Object.ReferenceEquals(null, this.entityInventory.equippedWeaponRight))
         {
             total = this.entityInventory.equippedWeaponRight.CalculateMaterialStats() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStats();
         }
-        if (this.entityInventory.equippedWeaponRight != null)
+        if (Object.ReferenceEquals(null, this.entityInventory.equippedWeaponLeft))
         {
             total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats();
         }
