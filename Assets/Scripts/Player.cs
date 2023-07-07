@@ -27,7 +27,7 @@ public class Player : Entity
         }
         if (this.entityInventory.equippedWeaponRight != null)
         {
-            total += (this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats());
+            total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStats() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStats();
         }
         return total;
     }
