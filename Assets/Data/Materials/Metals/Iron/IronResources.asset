@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ad6c5751651fb4f9606d33377edc6c, type: 3}
   m_Name: IronResources
   m_EditorClassIdentifier: 
-  maxHealth: 7
-  maxMana: -7
+  maxHealth: 12
+  maxMana: 0
   maxStamina: 3
-  maxEnergy: 0
-  maxMagic: 0
+  maxEnergy: 10
+  maxMagic: -5

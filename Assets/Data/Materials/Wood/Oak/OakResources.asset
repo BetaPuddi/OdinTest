@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ad6c5751651fb4f9606d33377edc6c, type: 3}
   m_Name: OakResources
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  maxMana: 0
-  maxStamina: 0
-  maxEnergy: 0
-  maxMagic: 0
+  maxHealth: 20
+  maxMana: 6
+  maxStamina: 5
+  maxEnergy: -5
+  maxMagic: 10
