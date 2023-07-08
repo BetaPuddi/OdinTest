@@ -16,6 +16,7 @@ public class DefinedWeapon : WeaponBase
         //totalMaxHealth = CalculateWeaponResourcesTotals();
     }
 
+    // Calculate resources
     public int CalculateMaterialMaxHealth()
     {
         int total = 0;
@@ -123,6 +124,7 @@ public class DefinedWeapon : WeaponBase
         return total;
     }*/
 
+    // Attribute calculations
     public int CalculateMaterialStrength()
     {
         int total = 0;
@@ -209,6 +211,36 @@ public class DefinedWeapon : WeaponBase
         for (int i = 0; i < materials.Length; i++)
         {
             total += this.materials[i].materialAttributeValues.mindAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeStrength()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.strengthAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeDexterity()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.dexterityAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeConstitution()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.constitutionAtt;
         }
         return total;
     }
