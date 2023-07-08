@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14ad6c5751651fb4f9606d33377edc6c, type: 3}
-  m_Name: FistStats
+  m_Name: FistResources
   m_EditorClassIdentifier: 
   maxHealth: 0
   maxMana: 0
