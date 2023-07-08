@@ -184,6 +184,14 @@ public class Player : Entity
         return total;
     }
 
+    public int CalculatePlayerMindFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMind() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMind();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMind() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMind();
+        return total;
+    }
+
     public int CalculatePlayerStrengthFromArmour()
     {
         int total = 0;
