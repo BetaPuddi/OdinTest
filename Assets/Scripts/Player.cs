@@ -28,6 +28,7 @@ public class Player : Entity
         this.maxMagic = CalculatePlayerMaxMagicFromWeapons() + CalculatePlayerMaxMagicFromArmour();
     }
 
+    // Resource Calculations
     public int CalculatePlayerMaxHealthFromWeapons()
     {
         int total = 0;
@@ -107,4 +108,6 @@ public class Player : Entity
         total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxMagic();
         return total;
     }
+
+    // Attribute Calculations
 }
