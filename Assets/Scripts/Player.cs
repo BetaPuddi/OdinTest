@@ -15,7 +15,7 @@ public class Player : Entity
     // Update is called once per frame
     void Update()
     {
-        this.maxHealth = CalculatePlayerMaxHealthFromWeapons();
+        this.maxHealth = CalculatePlayerMaxHealthFromWeapons() + CalculatePlayerMaxHealthFromArmour();
     }
 
     public int CalculatePlayerMaxHealthFromWeapons()
@@ -29,7 +29,8 @@ public class Player : Entity
         return total;
     }
 
-    public int CalculatePlayerMaxHealthFromArmour() {
+    public int CalculatePlayerMaxHealthFromArmour()
+    {
         int total = 0;
 
         total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxHealth();
