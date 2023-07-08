@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeName: 
   weaponTypeResourceValues: {fileID: 11400000, guid: ed042a6de0ff2854fab7c04b26fc229c, type: 2}
+  weaponTypeAttributeValues: {fileID: 11400000, guid: 7fd9cfa9f30b92842a347258c176ed46, type: 2}

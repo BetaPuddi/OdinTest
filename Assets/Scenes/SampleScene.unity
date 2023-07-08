@@ -5455,12 +5455,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2938f4917ba846f478e8b85aa97af74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 388755539}
   healthText: {fileID: 785277018}
   manaText: {fileID: 746701246}
   staminaText: {fileID: 520812744}
   energyText: {fileID: 1217837296}
   magicText: {fileID: 1947214650}
-  player: {fileID: 388755539}
+  strengthText: {fileID: 1671349655}
+  dexterityText: {fileID: 550761543}
+  constitutionText: {fileID: 1360067168}
+  intelligenceText: {fileID: 870770772}
+  wisdomText: {fileID: 1779774323}
+  focusText: {fileID: 1740824097}
+  charismaText: {fileID: 1578598514}
+  luckText: {fileID: 218797087}
+  mindText: {fileID: 390284095}
 --- !u!114 &1913096231
 MonoBehaviour:
   m_ObjectHideFlags: 0

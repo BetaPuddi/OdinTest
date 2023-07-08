@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b5fa02b63b0d147840b780b99b7f43, type: 3}
   m_Name: SwordAttributes
   m_EditorClassIdentifier: 
-  strengthAtt: 0
-  dexterityAtt: 0
-  constitutionAtt: 0
-  intelligenceAtt: 0
+  strengthAtt: 12
+  dexterityAtt: 6
+  constitutionAtt: 7
+  intelligenceAtt: -2
   wisdomAtt: 0
-  focusAtt: 0
+  focusAtt: 3
   charismaAtt: 0
   luckAtt: 0
   mindAtt: 0
