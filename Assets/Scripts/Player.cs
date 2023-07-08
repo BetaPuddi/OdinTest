@@ -26,6 +26,16 @@ public class Player : Entity
         this.maxStamina = CalculatePlayerMaxStaminaFromWeapons() + CalculatePlayerMaxStaminaFromArmour();
         this.maxEnergy = CalculatePlayerMaxEnergyFromWeapons() + CalculatePlayerMaxEnergyFromArmour();
         this.maxMagic = CalculatePlayerMaxMagicFromWeapons() + CalculatePlayerMaxMagicFromArmour();
+
+        this.strength = CalculatePlayerStrengthFromWeapons() + CalculatePlayerStrengthFromArmour();
+        this.dexterity = CalculatePlayerDexterityFromWeapons() + CalculatePlayerDexterityFromArmour();
+        this.constitution = CalculatePlayerConstitutionFromWeapons() + CalculatePlayerConstitutionFromArmour();
+        this.intelligence = CalculatePlayerIntelligenceFromWeapons() + CalculatePlayerIntelligenceFromArmour();
+        this.wisdom = CalculatePlayerWisdomFromWeapons() + CalculatePlayerWisdomFromArmour();
+        this.focus = CalculatePlayerFocusFromWeapons() + CalculatePlayerFocusFromArmour();
+        this.charisma = CalculatePlayerCharismaFromWeapons() + CalculatePlayerCharismaFromArmour();
+        this.luck = CalculatePlayerLuckFromWeapons() + CalculatePlayerLuckFromArmour();
+        this.mind = CalculatePlayerMindFromWeapons() + CalculatePlayerMindFromArmour();
     }
 
     // Resource Calculations
@@ -110,4 +120,130 @@ public class Player : Entity
     }
 
     // Attribute Calculations
+    public int CalculatePlayerStrengthFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialStrength() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStrength();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStrength() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStrength();
+        return total;
+    }
+
+    public int CalculatePlayerDexterityFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialDexterity() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeDexterity();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialDexterity() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeDexterity();
+        return total;
+    }
+
+    public int CalculatePlayerConstitutionFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialConstitution() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeConstitution();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialConstitution() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeConstitution();
+        return total;
+    }
+
+    public int CalculatePlayerIntelligenceFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialIntelligence() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeIntelligence();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialIntelligence() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeIntelligence();
+        return total;
+    }
+
+    public int CalculatePlayerWisdomFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialWisdom() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeWisdom();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialWisdom() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeWisdom();
+        return total;
+    }
+
+    public int CalculatePlayerFocusFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialFocus() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeFocus();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialFocus() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeFocus();
+        return total;
+    }
+
+    public int CalculatePlayerCharismaFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialCharisma() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeCharisma();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialCharisma() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeCharisma();
+        return total;
+    }
+
+    public int CalculatePlayerLuckFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialLuck() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeLuck();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialLuck() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeLuck();
+        return total;
+    }
+
+    public int CalculatePlayerStrengthFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialStrength() + this.entityInventory.equippedChestArmour.CalculateMaterialStrength() + this.entityInventory.equippedHandArmour.CalculateMaterialStrength() + this.entityInventory.equippedLegArmour.CalculateMaterialStrength() + this.entityInventory.equippedFeetArmour.CalculateMaterialStrength();
+        return total;
+    }
+
+    public int CalculatePlayerDexterityFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialDexterity() + this.entityInventory.equippedChestArmour.CalculateMaterialDexterity() + this.entityInventory.equippedHandArmour.CalculateMaterialDexterity() + this.entityInventory.equippedLegArmour.CalculateMaterialDexterity() + this.entityInventory.equippedFeetArmour.CalculateMaterialDexterity();
+        return total;
+    }
+
+    public int CalculatePlayerConstitutionFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialConstitution() + this.entityInventory.equippedChestArmour.CalculateMaterialConstitution() + this.entityInventory.equippedHandArmour.CalculateMaterialConstitution() + this.entityInventory.equippedLegArmour.CalculateMaterialConstitution() + this.entityInventory.equippedFeetArmour.CalculateMaterialConstitution();
+        return total;
+    }
+
+    public int CalculatePlayerIntelligenceFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedChestArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedHandArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedLegArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedFeetArmour.CalculateMaterialIntelligence();
+        return total;
+    }
+
+    public int CalculatePlayerWisdomFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialWisdom() + this.entityInventory.equippedChestArmour.CalculateMaterialWisdom() + this.entityInventory.equippedHandArmour.CalculateMaterialWisdom() + this.entityInventory.equippedLegArmour.CalculateMaterialWisdom() + this.entityInventory.equippedFeetArmour.CalculateMaterialWisdom();
+        return total;
+    }
+
+    public int CalculatePlayerFocusFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialFocus() + this.entityInventory.equippedChestArmour.CalculateMaterialFocus() + this.entityInventory.equippedHandArmour.CalculateMaterialFocus() + this.entityInventory.equippedLegArmour.CalculateMaterialFocus() + this.entityInventory.equippedFeetArmour.CalculateMaterialFocus();
+        return total;
+    }
+
+    public int CalculatePlayerCharismaFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialCharisma() + this.entityInventory.equippedChestArmour.CalculateMaterialCharisma() + this.entityInventory.equippedHandArmour.CalculateMaterialCharisma() + this.entityInventory.equippedLegArmour.CalculateMaterialCharisma() + this.entityInventory.equippedFeetArmour.CalculateMaterialCharisma();
+        return total;
+    }
+
+    public int CalculatePlayerLuckFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialLuck() + this.entityInventory.equippedChestArmour.CalculateMaterialLuck() + this.entityInventory.equippedHandArmour.CalculateMaterialLuck() + this.entityInventory.equippedLegArmour.CalculateMaterialLuck() + this.entityInventory.equippedFeetArmour.CalculateMaterialLuck();
+        return total;
+    }
+
+    public int CalculatePlayerMindFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMind() + this.entityInventory.equippedChestArmour.CalculateMaterialMind() + this.entityInventory.equippedHandArmour.CalculateMaterialMind() + this.entityInventory.equippedLegArmour.CalculateMaterialMind() + this.entityInventory.equippedFeetArmour.CalculateMaterialMind();
+        return total;
+    }
 }
