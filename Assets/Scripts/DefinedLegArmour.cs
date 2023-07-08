@@ -74,7 +74,7 @@ public class DefinedLegArmour : ArmourBase
         return total;
     }
 
-    public int ClculateMaterialConstitution()
+    public int CalculateMaterialConstitution()
     {
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
