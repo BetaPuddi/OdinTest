@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Steel
   m_EditorClassIdentifier: 
   componentMaterialName: Steel
-  materialStatValues: {fileID: 11400000, guid: 666266140d5ef3647b97d968682d2adc, type: 2}
+  materialResourceValues: {fileID: 11400000, guid: 666266140d5ef3647b97d968682d2adc, type: 2}
   materialAttributeValues: {fileID: 11400000, guid: 26d13e1d7bdfeae4fa876263571e9ddf, type: 2}

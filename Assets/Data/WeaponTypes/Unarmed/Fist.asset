@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fist
   m_EditorClassIdentifier: 
   typeName: 
-  weaponTypeStatValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
+  weaponTypeResourceValues: {fileID: 11400000, guid: ed042a6de0ff2854fab7c04b26fc229c, type: 2}

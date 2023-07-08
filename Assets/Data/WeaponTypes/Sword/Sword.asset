@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   typeName: Sword
-  weaponTypeStatValues: {fileID: 11400000, guid: dc88d4b4a56c239448091e137321ca20, type: 2}
+  weaponTypeResourceValues: {fileID: 11400000, guid: dc88d4b4a56c239448091e137321ca20, type: 2}
