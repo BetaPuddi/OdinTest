@@ -110,4 +110,27 @@ public class Player : Entity
     }
 
     // Attribute Calculations
+    public int CalculatePlayerStrengthFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialStrength() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStrength();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStrength() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStrength();
+        return total;
+    }
+
+    public int CalculatePlayerDexterityFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialDexterity() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeDexterity();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialDexterity() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeDexterity();
+        return total;
+    }
+
+    public int CalculatePlayerConstitutionFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialConstitution() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeConstitution();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialConstitution() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeConstitution();
+        return total;
+    }
 }
