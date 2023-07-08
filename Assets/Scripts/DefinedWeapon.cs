@@ -16,7 +16,7 @@ public class DefinedWeapon : WeaponBase
         //totalMaxHealth = CalculateWeaponStatsTotals();
     }
 
-    public int CalculateMaterialStats()
+    public int CalculateMaterialMaxHealth()
     {
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
@@ -27,7 +27,7 @@ public class DefinedWeapon : WeaponBase
         return total;
     }
 
-    public int CalculateWeaponTypeStats()
+    public int CalculateWeaponTypeMaxHealth()
     {
         int total = 0;
         for (int i = 0; i < weaponType.Length; i++)
@@ -37,9 +37,9 @@ public class DefinedWeapon : WeaponBase
         return total;
     }
 
-    public int CalculateWeaponStatsTotals()
+    /*public int CalculateWeaponStatsTotals()
     {
         int total = this.statValues.maxHealth + this.materialsMaxHealth + this.weaponTypeMaxHealth;
         return total;
-    }
+    }*/
 }
