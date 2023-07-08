@@ -154,7 +154,24 @@ public class Player : Entity
     {
         int total = 0;
         total = this.entityInventory.equippedWeaponRight.CalculateMaterialFocus() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeFocus();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialFocus() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeFocus();
+        return total;
+    }
 
+    public int CalculatePlayerCharismaFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialCharisma() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeCharisma();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialCharisma() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeCharisma();
+        return total;
+    }
+
+    public int CalculatePlayerLuckFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialLuck() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeLuck();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialLuck() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeLuck();
+        return total;
     }
 
 }
