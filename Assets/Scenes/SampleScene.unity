@@ -2050,16 +2050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2938f4917ba846f478e8b85aa97af74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthText: {fileID: 0}
-  currentHealthText: {fileID: 0}
-  maxManaText: {fileID: 0}
-  currentManaText: {fileID: 0}
-  maxStaminaText: {fileID: 0}
-  currentStaminaText: {fileID: 0}
-  maxEnergyText: {fileID: 0}
-  currentEnergyText: {fileID: 0}
-  maxMagicText: {fileID: 0}
-  currentMagicText: {fileID: 0}
+  healthText: {fileID: 785277018}
+  manaText: {fileID: 746701246}
+  staminaText: {fileID: 520812744}
+  energyText: {fileID: 1217837296}
+  magicText: {fileID: 1947214650}
   player: {fileID: 388755539}
 --- !u!1 &1947214648
 GameObject:

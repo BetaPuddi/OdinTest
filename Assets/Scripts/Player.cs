@@ -10,12 +10,22 @@ public class Player : Entity
     void Start()
     {
         this.entityInventory = this.GetComponent<Inventory>();
+
+        this.currentHealth = this.maxHealth;
+        this.currentMana = this.maxMana;
+        this.currentStamina = this.maxStamina;
+        this.currentEnergy = this.maxEnergy;
+        this.currentMagic = this.maxMagic;
     }
 
     // Update is called once per frame
     void Update()
     {
         this.maxHealth = CalculatePlayerMaxHealthFromWeapons() + CalculatePlayerMaxHealthFromArmour();
+        this.maxMana = CalculatePlayerMaxManaFromWeapons() + CalculatePlayerMaxManaFromArmour();
+        this.maxStamina = CalculatePlayerMaxStaminaFromWeapons() + CalculatePlayerMaxStaminaFromArmour();
+        this.maxEnergy = CalculatePlayerMaxEnergyFromWeapons() + CalculatePlayerMaxEnergyFromArmour();
+        this.maxMagic = CalculatePlayerMaxMagicFromWeapons() + CalculatePlayerMaxMagicFromArmour();
     }
 
     public int CalculatePlayerMaxHealthFromWeapons()
@@ -29,11 +39,72 @@ public class Player : Entity
         return total;
     }
 
+    public int CalculatePlayerMaxManaFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxMana() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxMana();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxMana() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxMana();
+        return total;
+    }
+
+    public int CalculatePlayerMaxStaminaFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxStamina() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxStamina();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxStamina() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxStamina();
+        return total;
+    }
+
+    public int CalculatePlayerMaxEnergyFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxEnergy() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxEnergy();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxEnergy() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxEnergy();
+        return total;
+    }
+
+    public int CalculatePlayerMaxMagicFromWeapons()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxMagic() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxMagic();
+        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxMagic() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxMagic();
+        return total;
+    }
+
     public int CalculatePlayerMaxHealthFromArmour()
     {
         int total = 0;
 
         total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxHealth();
+
+        return total;
+    }
+
+    public int CalculatePlayerMaxManaFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxMana();
+        return total;
+    }
+
+    public int CalculatePlayerMaxStaminaFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxStamina();
+        return total;
+    }
+
+    public int CalculatePlayerMaxEnergyFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxEnergy();
+        return total;
+    }
+
+    public int CalculatePlayerMaxMagicFromArmour()
+    {
+        int total = 0;
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxMagic();
         return total;
     }
 }

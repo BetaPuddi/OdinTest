@@ -6,16 +6,16 @@ using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
-    public TextMeshProUGUI maxHealthText = null;
-    public TextMeshProUGUI currentHealthText = null;
-    public TextMeshProUGUI maxManaText = null;
-    public TextMeshProUGUI currentManaText = null;
-    public TextMeshProUGUI maxStaminaText = null;
-    public TextMeshProUGUI currentStaminaText = null;
-    public TextMeshProUGUI maxEnergyText = null;
-    public TextMeshProUGUI currentEnergyText = null;
-    public TextMeshProUGUI maxMagicText = null;
-    public TextMeshProUGUI currentMagicText = null;
+    public TextMeshProUGUI healthText = null;
+    //public TextMeshProUGUI currentHealthText = null;
+    public TextMeshProUGUI manaText = null;
+    //public TextMeshProUGUI currentManaText = null;
+    public TextMeshProUGUI staminaText = null;
+    //public TextMeshProUGUI currentStaminaText = null;
+    public TextMeshProUGUI energyText = null;
+    //public TextMeshProUGUI currentEnergyText = null;
+    public TextMeshProUGUI magicText = null;
+    //public TextMeshProUGUI currentMagicText = null;
     public Player player = null;
 
     // Start is called before the first frame update
@@ -28,6 +28,10 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
 
-        maxHealthText.text = player.maxHealth.ToString();
+        healthText.text = player.currentHealth.ToString() + " / " + player.maxHealth.ToString();
+        manaText.text = player.currentMana.ToString() + " / " + player.maxMana.ToString();
+        staminaText.text = player.currentStamina.ToString() + " / " + player.maxStamina.ToString();
+        energyText.text = player.currentEnergy.ToString() + " / " + player.maxEnergy.ToString();
+        magicText.text = player.currentMagic.ToString() + " / " + player.maxMagic.ToString();
     }
 }
