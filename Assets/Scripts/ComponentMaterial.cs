@@ -4,6 +4,6 @@
 public class ComponentMaterial : ScriptableObject
 {
     public string componentMaterialName;
-    public StatValues materialStatValues;
+    public ResourceValues materialResourceValues;
     public AttributeValues materialAttributeValues;
 }
