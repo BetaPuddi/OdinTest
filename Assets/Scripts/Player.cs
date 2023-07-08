@@ -26,6 +26,16 @@ public class Player : Entity
         this.maxStamina = CalculatePlayerMaxStaminaFromWeapons() + CalculatePlayerMaxStaminaFromArmour();
         this.maxEnergy = CalculatePlayerMaxEnergyFromWeapons() + CalculatePlayerMaxEnergyFromArmour();
         this.maxMagic = CalculatePlayerMaxMagicFromWeapons() + CalculatePlayerMaxMagicFromArmour();
+
+        this.strength = CalculatePlayerStrengthFromWeapons() + CalculatePlayerStrengthFromArmour();
+        this.dexterity = CalculatePlayerDexterityFromWeapons() + CalculatePlayerDexterityFromArmour();
+        this.constitution = CalculatePlayerConstitutionFromWeapons() + CalculatePlayerConstitutionFromArmour();
+        this.intelligence = CalculatePlayerIntelligenceFromWeapons() + CalculatePlayerIntelligenceFromArmour();
+        this.wisdom = CalculatePlayerWisdomFromWeapons() + CalculatePlayerWisdomFromArmour();
+        this.focus = CalculatePlayerFocusFromWeapons() + CalculatePlayerFocusFromArmour();
+        this.charisma = CalculatePlayerCharismaFromWeapons() + CalculatePlayerCharismaFromArmour();
+        this.luck = CalculatePlayerLuckFromWeapons() + CalculatePlayerLuckFromArmour();
+        this.mind = CalculatePlayerMindFromWeapons() + CalculatePlayerMindFromArmour();
     }
 
     // Resource Calculations
