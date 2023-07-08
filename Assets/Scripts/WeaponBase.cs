@@ -35,6 +35,33 @@ public abstract class WeaponBase : ScriptableObject
     //Replaces the attack command - can be null
     public Action attackReplacement;
 
+    public int CalculateMaterialStats()
+    {
+        int total = 0;
+        for (int i = 0; i < materials.Length; i++)
+        {
+            total += this.materials[i].materialStatValues.maxHealth;
+        }
+
+        return total;
+    }
+
+    public int CalculateWeaponTypeStats()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeStatValues.maxHealth;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponStatsTotals()
+    {
+        int total = this.statValues.maxHealth + this.materialsMaxHealth + this.weaponTypeMaxHealth;
+        return total;
+    }
+
     /*public Weapon(string name, string description, WeaponType type, string range, int value, Material[] materials, DamageType[] damageTypes, ElementType[] elements, AttributeValues attributeValues, StatValues statValues, Passive[] passives, Action attackReplacement)
     {
         this.name = name;
