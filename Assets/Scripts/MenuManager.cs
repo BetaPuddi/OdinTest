@@ -42,5 +42,15 @@ public class MenuManager : MonoBehaviour
         staminaText.text = player.currentStamina.ToString() + " / " + player.maxStamina.ToString();
         energyText.text = player.currentEnergy.ToString() + " / " + player.maxEnergy.ToString();
         magicText.text = player.currentMagic.ToString() + " / " + player.maxMagic.ToString();
+
+        strengthText.text = player.strength.ToString();
+        dexterityText.text = player.dexterity.ToString();
+        constitutionText.text = player.constitution.ToString();
+        intelligenceText.text = player.intelligence.ToString();
+        wisdomText.text = player.wisdom.ToString();
+        focusText.text = player.focus.ToString();
+        charismaText.text = player.charisma.ToString();
+        luckText.text = player.luck.ToString();
+        mindText.text = player.mind.ToString();
     }
 }
