@@ -276,6 +276,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equippedWeaponRight: {fileID: 11400000, guid: 82ce8d609b0647740af27d61d5d05d8f, type: 2}
   equippedWeaponLeft: {fileID: 11400000, guid: 47e0ba03b8207154bbd67711802e0568, type: 2}
+  equippedHeadArmour: {fileID: 11400000, guid: 1f1f4b575b4301640b9f4c992448305f, type: 2}
+  equippedChestArmour: {fileID: 11400000, guid: 90f4798807627454fa9fb349cc79d288, type: 2}
+  equippedHandArmour: {fileID: 11400000, guid: 03d39cc1f2edb294fb08740069cd6604, type: 2}
+  equippedLegArmour: {fileID: 11400000, guid: 53569b90f07080c448773dc79d247bce, type: 2}
+  equippedFootArmour: {fileID: 11400000, guid: 5d3e069c4b45e864aae79a12217e20ba, type: 2}
 --- !u!114 &388755539
 MonoBehaviour:
   m_ObjectHideFlags: 0

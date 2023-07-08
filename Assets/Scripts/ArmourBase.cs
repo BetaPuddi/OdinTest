@@ -6,7 +6,7 @@ public class ArmourBase : ScriptableObject
 {
     public string armourName;
     public string armourDescription;
-    public ArmourType armourType;
+    //public ArmourType armourType;
     public int armourPrice;
 
     public ComponentMaterial[] materials;
