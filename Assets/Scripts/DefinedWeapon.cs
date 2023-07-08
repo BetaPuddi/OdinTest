@@ -244,4 +244,64 @@ public class DefinedWeapon : WeaponBase
         }
         return total;
     }
+
+    public int CalculateWeaponTypeIntelligence()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.intelligenceAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeWisdom()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.wisdomAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeFocus()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.focusAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeCharisma()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.charismaAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeLuck()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.luckAtt;
+        }
+        return total;
+    }
+
+    public int CalculateWeaponTypeMind()
+    {
+        int total = 0;
+        for (int i = 0; i < weaponType.Length; i++)
+        {
+            total += this.weaponType[i].weaponTypeAttributeValues.mindAtt;
+        }
+        return total;
+    }
 }
