@@ -6,6 +6,7 @@ using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
+    public Player player = null;
     public TextMeshProUGUI healthText = null;
     //public TextMeshProUGUI currentHealthText = null;
     public TextMeshProUGUI manaText = null;
@@ -16,7 +17,15 @@ public class MenuManager : MonoBehaviour
     //public TextMeshProUGUI currentEnergyText = null;
     public TextMeshProUGUI magicText = null;
     //public TextMeshProUGUI currentMagicText = null;
-    public Player player = null;
+    public TextMeshProUGUI strengthText = null;
+    public TextMeshProUGUI dexterityText = null;
+    public TextMeshProUGUI constitutionText = null;
+    public TextMeshProUGUI intelligenceText = null;
+    public TextMeshProUGUI wisdomText = null;
+    public TextMeshProUGUI focusText = null;
+    public TextMeshProUGUI charismaText = null;
+    public TextMeshProUGUI luckText = null;
+    public TextMeshProUGUI mindText = null;
 
     // Start is called before the first frame update
     void Start()
