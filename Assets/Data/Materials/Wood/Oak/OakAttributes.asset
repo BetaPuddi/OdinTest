@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b5fa02b63b0d147840b780b99b7f43, type: 3}
   m_Name: OakAttributes
   m_EditorClassIdentifier: 
-  strengthAtt: 0
-  dexterityAtt: 0
-  constitutionAtt: 0
-  intelligenceAtt: 0
-  wisdomAtt: 0
+  strengthAtt: 7
+  dexterityAtt: -2
+  constitutionAtt: 6
+  intelligenceAtt: -5
+  wisdomAtt: 8
   focusAtt: 0
-  charismaAtt: 0
+  charismaAtt: -1
   luckAtt: 0
-  mindAtt: 0
+  mindAtt: 4

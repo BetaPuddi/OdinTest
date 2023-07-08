@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca63f0777febc6d4aa953e8d23c7c673, type: 3}
   m_Name: Oak
   m_EditorClassIdentifier: 
-  componentMaterialName: 
-  materialResourceValues: {fileID: 0}
-  materialAttributeValues: {fileID: 0}
+  componentMaterialName: Oak
+  materialResourceValues: {fileID: 11400000, guid: aa6f08100adb1f4439a31eb156f9aa78, type: 2}
+  materialAttributeValues: {fileID: 11400000, guid: b318fd7d776045542926aa38b9f046cc, type: 2}

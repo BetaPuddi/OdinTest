@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b5fa02b63b0d147840b780b99b7f43, type: 3}
   m_Name: IronAttributes
   m_EditorClassIdentifier: 
-  strengthAtt: 5
-  dexterityAtt: 3
-  constitutionAtt: 1
-  intelligenceAtt: 0
+  strengthAtt: 8
+  dexterityAtt: 2
+  constitutionAtt: 4
+  intelligenceAtt: -10
   wisdomAtt: 0
   focusAtt: 0
-  charismaAtt: 0
+  charismaAtt: 3
   luckAtt: 0
   mindAtt: 0
