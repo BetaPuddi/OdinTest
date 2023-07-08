@@ -21,7 +21,14 @@ public class PlayerPanelController : MonoBehaviour
 
     public void TogglePlayerAttributePanel()
     {
+        playerAttributesPanel.SetActive(true);
+        playerResourcesPanel.SetActive(false);
+    }
 
+    public void TogglePlayerResourcePanel()
+    {
+        playerAttributesPanel.SetActive(false);
+        playerResourcesPanel.SetActive(true);
     }
 
 }
