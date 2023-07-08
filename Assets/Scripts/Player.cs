@@ -33,7 +33,7 @@ public class Player : Entity
     {
         int total = 0;
 
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxHealth();
+        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxHealth();
         return total;
     }
 }
