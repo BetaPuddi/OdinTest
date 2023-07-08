@@ -28,14 +28,14 @@ public abstract class WeaponBase : ScriptableObject
     public AttackAndDefValues attackAndDefValues;
     //Attribute values of the weapon - Strength, Dexterity etc
     public AttributeValues attributeValues;
-    //Stat values of the weapon - Attack, Defense, Speed, etc
-    public StatValues statValues;
+    //resource values of the weapon - Attack, Defense, Speed, etc
+    public ResourceValues resourceValues;
     //Passive effects of the weapon - Can be passed on from materials
     public Passive[] passives;
     //Replaces the attack command - can be null
     public Action attackReplacement;
 
-    /*public Weapon(string name, string description, WeaponType type, string range, int value, Material[] materials, DamageType[] damageTypes, ElementType[] elements, AttributeValues attributeValues, StatValues statValues, Passive[] passives, Action attackReplacement)
+    /*public Weapon(string name, string description, WeaponType type, string range, int value, Material[] materials, DamageType[] damageTypes, ElementType[] elements, AttributeValues attributeValues, resourceValues resourceValues, Passive[] passives, Action attackReplacement)
     {
         this.name = name;
         this.description = description;
@@ -46,7 +46,7 @@ public abstract class WeaponBase : ScriptableObject
         this.damageTypes = damageTypes;
         this.elements = elements;
         this.attributeValues = attributeValues;
-        this.statValues = statValues;
+        this.resourceValues = resourceValues;
         this.passives = passives;
         this.attackReplacement = attackReplacement;
     }*/

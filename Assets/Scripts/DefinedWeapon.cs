@@ -11,9 +11,9 @@ public class DefinedWeapon : WeaponBase
 
     private void OnEnable()
     {
-        //materialsMaxHealth = CalculateMaterialStats();
-        //weaponTypeMaxHealth = CalculateWeaponTypeStats();
-        //totalMaxHealth = CalculateWeaponStatsTotals();
+        //materialsMaxHealth = CalculateMaterialResources();
+        //weaponTypeMaxHealth = CalculateWeaponTypeResources();
+        //totalMaxHealth = CalculateWeaponResourcesTotals();
     }
 
     public int CalculateMaterialMaxHealth()
@@ -21,7 +21,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxHealth;
+            total += this.materials[i].materialResourceValues.maxHealth;
         }
 
         return total;
@@ -32,7 +32,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxMana;
+            total += this.materials[i].materialResourceValues.maxMana;
         }
         return total;
     }
@@ -42,7 +42,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxStamina;
+            total += this.materials[i].materialResourceValues.maxStamina;
         }
         return total;
     }
@@ -52,7 +52,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxEnergy;
+            total += this.materials[i].materialResourceValues.maxEnergy;
         }
         return total;
     }
@@ -62,7 +62,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxMagic;
+            total += this.materials[i].materialResourceValues.maxMagic;
         }
         return total;
     }
@@ -72,7 +72,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < weaponType.Length; i++)
         {
-            total += this.weaponType[i].weaponTypeStatValues.maxHealth;
+            total += this.weaponType[i].weaponTypeResourceValues.maxHealth;
         }
         return total;
     }
@@ -82,7 +82,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < weaponType.Length; i++)
         {
-            total += this.weaponType[i].weaponTypeStatValues.maxMana;
+            total += this.weaponType[i].weaponTypeResourceValues.maxMana;
         }
         return total;
     }
@@ -92,7 +92,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < weaponType.Length; i++)
         {
-            total += this.weaponType[i].weaponTypeStatValues.maxStamina;
+            total += this.weaponType[i].weaponTypeResourceValues.maxStamina;
         }
         return total;
     }
@@ -102,7 +102,7 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < weaponType.Length; i++)
         {
-            total += this.weaponType[i].weaponTypeStatValues.maxEnergy;
+            total += this.weaponType[i].weaponTypeResourceValues.maxEnergy;
         }
         return total;
     }
@@ -112,14 +112,14 @@ public class DefinedWeapon : WeaponBase
         int total = 0;
         for (int i = 0; i < weaponType.Length; i++)
         {
-            total += this.weaponType[i].weaponTypeStatValues.maxMagic;
+            total += this.weaponType[i].weaponTypeResourceValues.maxMagic;
         }
         return total;
     }
 
-    /*public int CalculateWeaponStatsTotals()
+    /*public int CalculateWeaponResourcesTotals()
     {
-        int total = this.statValues.maxHealth + this.materialsMaxHealth + this.weaponTypeMaxHealth;
+        int total = this.ResourceValues.maxHealth + this.materialsMaxHealth + this.weaponTypeMaxHealth;
         return total;
     }*/
 }

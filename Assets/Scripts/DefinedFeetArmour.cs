@@ -8,7 +8,7 @@ public class DefinedFeetArmour : ArmourBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxHealth;
+            total += this.materials[i].materialResourceValues.maxHealth;
         }
 
         return total;
@@ -19,7 +19,7 @@ public class DefinedFeetArmour : ArmourBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxMana;
+            total += this.materials[i].materialResourceValues.maxMana;
         }
         return total;
     }
@@ -29,7 +29,7 @@ public class DefinedFeetArmour : ArmourBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxStamina;
+            total += this.materials[i].materialResourceValues.maxStamina;
         }
         return total;
     }
@@ -39,7 +39,7 @@ public class DefinedFeetArmour : ArmourBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxEnergy;
+            total += this.materials[i].materialResourceValues.maxEnergy;
         }
         return total;
     }
@@ -49,7 +49,7 @@ public class DefinedFeetArmour : ArmourBase
         int total = 0;
         for (int i = 0; i < materials.Length; i++)
         {
-            total += this.materials[i].materialStatValues.maxMagic;
+            total += this.materials[i].materialResourceValues.maxMagic;
         }
         return total;
     }

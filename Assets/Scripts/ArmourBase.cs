@@ -14,6 +14,6 @@ public class ArmourBase : ScriptableObject
     public ElementType[] elements;
     public AttackAndDefValues attackAndDefValues;
     public AttributeValues attributeValues;
-    public StatValues statValues;
+    public ResourceValues resourceValues;
     public Passive[] passives;
 }
