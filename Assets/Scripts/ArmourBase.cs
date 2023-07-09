@@ -7,6 +7,16 @@ public abstract class ArmourBase : InventoryItem
     public string armourName;
     public string armourDescription;
     //public ArmourType armourType;
+    [SerializeField]
+    public enum ArmourTypes
+    {
+        Head,
+        Chest,
+        Hands,
+        Legs,
+        Feet
+    }
+    public ArmourTypes armourType;
     public int armourPrice;
 
     public List<ComponentMaterial> materials = new List<ComponentMaterial>();

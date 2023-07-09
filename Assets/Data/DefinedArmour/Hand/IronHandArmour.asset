@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armourName: Iron Gloves
   armourDescription: 
+  armourType: 2
   armourPrice: 0
   materials:
   - {fileID: 11400000, guid: ceac6063273ab5445826ec93f4e1ae2c, type: 2}
