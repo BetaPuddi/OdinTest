@@ -14,18 +14,6 @@ public class Inventory : MonoBehaviour
 
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void AddItem(InventoryItem item)
     {
         inventoryItems.Add(item);
@@ -82,11 +70,49 @@ public class Inventory : MonoBehaviour
     {
         return equippedWeaponLeft;
     }
-    public void SetHeadArmour(ArmourBase armour)
+    public void SetArmour(ArmourBase armour)
     {
         if (armour.armourType == ArmourBase.ArmourTypes.Head)
         {
             equippedHeadArmour = armour;
         }
+        else if (armour.armourType == ArmourBase.ArmourTypes.Chest)
+        {
+            equippedChestArmour = armour;
+        }
+        else if (armour.armourType == ArmourBase.ArmourTypes.Hand)
+        {
+            equippedHandArmour = armour;
+        }
+        else if (armour.armourType == ArmourBase.ArmourTypes.Leg)
+        {
+            equippedLegArmour = armour;
+        }
+        else if (armour.armourType == ArmourBase.ArmourTypes.Feet)
+        {
+            equippedFeetArmour = armour;
+        }
+    }
+    public ArmourBase GetHeadArmour()
+    {
+        return equippedHeadArmour;
+    }
+
+    public ArmourBase GetChestArmour()
+    {
+        return equippedChestArmour;
+    }
+
+    public ArmourBase GetHandArmour()
+    {
+        return equippedHandArmour;
+    }
+    public ArmourBase GetLegArmour()
+    {
+        return equippedLegArmour;
+    }
+    public ArmourBase GetFeetArmour()
+    {
+        return equippedFeetArmour;
     }
 }

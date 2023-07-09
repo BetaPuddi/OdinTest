@@ -12,8 +12,8 @@ public abstract class ArmourBase : InventoryItem
     {
         Head,
         Chest,
-        Hands,
-        Legs,
+        Hand,
+        Leg,
         Feet
     }
     public ArmourTypes armourType;
