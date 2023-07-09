@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 // Base class for all weapons
-public abstract class WeaponBase : ScriptableObject
+public abstract class WeaponBase : InventoryItem
 {
     //Name of the weapon
     public string weaponName;
@@ -35,19 +35,35 @@ public abstract class WeaponBase : ScriptableObject
     //Replaces the attack command - can be null
     public Action attackReplacement;
 
-    /*public Weapon(string name, string description, WeaponType type, string range, int value, Material[] materials, DamageType[] damageTypes, ElementType[] elements, AttributeValues attributeValues, resourceValues resourceValues, Passive[] passives, Action attackReplacement)
-    {
-        this.name = name;
-        this.description = description;
-        this.type = type;
-        this.range = range;
-        this.value = value;
-        this.materials = materials;
-        this.damageTypes = damageTypes;
-        this.elements = elements;
-        this.attributeValues = attributeValues;
-        this.resourceValues = resourceValues;
-        this.passives = passives;
-        this.attackReplacement = attackReplacement;
-    }*/
+    public abstract int CalculateMaterialMaxHealth();
+    public abstract int CalculateMaterialMaxMana();
+    public abstract int CalculateMaterialMaxStamina();
+    public abstract int CalculateMaterialMaxEnergy();
+    public abstract int CalculateMaterialMaxMagic();
+
+    public abstract int CalculateWeaponTypeMaxHealth();
+    public abstract int CalculateWeaponTypeMaxMana();
+    public abstract int CalculateWeaponTypeMaxStamina();
+    public abstract int CalculateWeaponTypeMaxEnergy();
+    public abstract int CalculateWeaponTypeMaxMagic();
+
+    public abstract int CalculateMaterialStrength();
+    public abstract int CalculateMaterialDexterity();
+    public abstract int CalculateMaterialConstitution();
+    public abstract int CalculateMaterialIntelligence();
+    public abstract int CalculateMaterialWisdom();
+    public abstract int CalculateMaterialFocus();
+    public abstract int CalculateMaterialCharisma();
+    public abstract int CalculateMaterialLuck();
+    public abstract int CalculateMaterialMind();
+
+    public abstract int CalculateWeaponTypeStrength();
+    public abstract int CalculateWeaponTypeDexterity();
+    public abstract int CalculateWeaponTypeConstitution();
+    public abstract int CalculateWeaponTypeIntelligence();
+    public abstract int CalculateWeaponTypeWisdom();
+    public abstract int CalculateWeaponTypeFocus();
+    public abstract int CalculateWeaponTypeCharisma();
+    public abstract int CalculateWeaponTypeLuck();
+    public abstract int CalculateWeaponTypeMind();
 }
