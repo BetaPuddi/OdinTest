@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541538133ef4ced4894edd1d3de9b14b, type: 3}
   m_Name: MagicType
   m_EditorClassIdentifier: 
-  elementName: 
+  damageTypeName: Magic

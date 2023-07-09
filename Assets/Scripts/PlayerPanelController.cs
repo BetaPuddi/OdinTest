@@ -7,6 +7,7 @@ public class PlayerPanelController : MonoBehaviour
 {
     public GameObject playerAttributesPanel;
     public GameObject playerResourcesPanel;
+    public GameObject playerInventoryPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,21 @@ public class PlayerPanelController : MonoBehaviour
     {
         playerAttributesPanel.SetActive(true);
         playerResourcesPanel.SetActive(false);
+        playerInventoryPanel.SetActive(false);
     }
 
     public void TogglePlayerResourcePanel()
     {
         playerAttributesPanel.SetActive(false);
         playerResourcesPanel.SetActive(true);
+        playerInventoryPanel.SetActive(false);
+    }
+
+    public void TogglePlayerInventoryPanel()
+    {
+        playerAttributesPanel.SetActive(false);
+        playerResourcesPanel.SetActive(false);
+        playerInventoryPanel.SetActive(true);
     }
 
 }
