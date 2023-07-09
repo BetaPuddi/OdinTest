@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ArmourBase : InventoryItem
 {
-    public string armourName;
+
     public string armourDescription;
     //public ArmourType armourType;
     [SerializeField]

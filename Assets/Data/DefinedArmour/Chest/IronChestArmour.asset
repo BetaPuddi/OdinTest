@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640aa0e63ef26dd4aaf1dc033120ec0c, type: 3}
   m_Name: IronChestArmour
   m_EditorClassIdentifier: 
-  armourName: Iron Chest Armour
+  itemName: Iron Chest Armour
   armourDescription: 
   armourType: 1
   armourPrice: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadc59ad329a08146a1d457fdb41e43a, type: 3}
   m_Name: IronFeetArmour
   m_EditorClassIdentifier: 
-  armourName: Iron Greaves
+  itemName: Iron Boots
   armourDescription: 
   armourType: 4
   armourPrice: 0

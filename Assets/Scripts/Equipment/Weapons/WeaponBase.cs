@@ -5,8 +5,7 @@ using System.Collections;
 // Base class for all weapons
 public abstract class WeaponBase : InventoryItem
 {
-    //Name of the weapon
-    public string weaponName;
+
     //Description of the weapon
     public string description;
 

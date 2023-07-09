@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2abf14f85ad41b4cba99d96ae22dbec, type: 3}
   m_Name: IronHandArmour
   m_EditorClassIdentifier: 
-  armourName: Iron Gloves
+  itemName: Iron Gloves
   armourDescription: 
   armourType: 2
   armourPrice: 0
