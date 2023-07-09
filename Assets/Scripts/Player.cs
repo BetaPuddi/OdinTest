@@ -39,6 +39,7 @@ public class Player : Entity
     }
 
     // Resource Calculations
+    #region Resource Calculations
     public int CalculatePlayerMaxHealthFromWeapons()
     {
         int total = 0;
@@ -118,8 +119,10 @@ public class Player : Entity
         total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxMagic();
         return total;
     }
+    #endregion
 
     // Attribute Calculations
+    #region Attribute Calculations
     public int CalculatePlayerStrengthFromWeapons()
     {
         int total = 0;
@@ -254,4 +257,5 @@ public class Player : Entity
         total = this.entityInventory.equippedHeadArmour.CalculateMaterialMind() + this.entityInventory.equippedChestArmour.CalculateMaterialMind() + this.entityInventory.equippedHandArmour.CalculateMaterialMind() + this.entityInventory.equippedLegArmour.CalculateMaterialMind() + this.entityInventory.equippedFeetArmour.CalculateMaterialMind();
         return total;
     }
+    #endregion
 }
