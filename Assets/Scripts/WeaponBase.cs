@@ -11,7 +11,7 @@ public abstract class WeaponBase : InventoryItem
     public string description;
 
     //Type of the weapon
-    public WeaponType[] weaponType;
+    public List<WeaponType> weaponType = new List<WeaponType>();
     //Range of the weapon - Close, Mid, Long
     public string range;
 
@@ -19,11 +19,11 @@ public abstract class WeaponBase : InventoryItem
     public int weaponPrice;
 
     //What the weapon is made of
-    public ComponentMaterial[] materials;
+    public List<ComponentMaterial> materials = new List<ComponentMaterial>();
     //Damage types of the weapon - Physical, Magical, Ethereal
-    public DamageType[] damageTypes;
+    public List<DamageType> damageTypes = new List<DamageType>();
     //Element types of the weapon
-    public ElementType[] elements;
+    public List<ElementType> elements = new List<ElementType>();
     //The attack and defense values of the weapon
     public AttackAndDefValues attackAndDefValues;
     //Attribute values of the weapon - Strength, Dexterity etc
@@ -31,7 +31,7 @@ public abstract class WeaponBase : InventoryItem
     //resource values of the weapon - Attack, Defense, Speed, etc
     public ResourceValues resourceValues;
     //Passive effects of the weapon - Can be passed on from materials
-    public Passive[] passives;
+    public List<Passive> passives = new List<Passive>();
     //Replaces the attack command - can be null
     public Action attackReplacement;
 

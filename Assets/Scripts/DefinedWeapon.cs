@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 
 [CreateAssetMenu(fileName = "DefinedWeapon", menuName = "New Weapon/DefinedWeapon", order = 0)]
@@ -20,7 +21,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialMaxHealth()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxHealth;
         }
@@ -31,7 +32,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialMaxMana()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxMana;
         }
@@ -41,7 +42,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialMaxStamina()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxStamina;
         }
@@ -51,7 +52,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialMaxEnergy()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxEnergy;
         }
@@ -61,7 +62,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialMaxMagic()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxMagic;
         }
@@ -71,7 +72,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeMaxHealth()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeResourceValues.maxHealth;
         }
@@ -81,7 +82,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeMaxMana()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeResourceValues.maxMana;
         }
@@ -91,7 +92,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeMaxStamina()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeResourceValues.maxStamina;
         }
@@ -101,7 +102,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeMaxEnergy()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeResourceValues.maxEnergy;
         }
@@ -111,7 +112,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeMaxMagic()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeResourceValues.maxMagic;
         }
@@ -128,7 +129,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialStrength()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.strengthAtt;
         }
@@ -138,7 +139,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialDexterity()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.dexterityAtt;
         }
@@ -148,7 +149,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialConstitution()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.constitutionAtt;
         }
@@ -158,7 +159,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialIntelligence()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.intelligenceAtt;
         }
@@ -168,7 +169,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialWisdom()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.wisdomAtt;
         }
@@ -178,7 +179,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialFocus()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.focusAtt;
         }
@@ -188,7 +189,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialCharisma()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.charismaAtt;
         }
@@ -198,7 +199,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialLuck()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.luckAtt;
         }
@@ -208,7 +209,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateMaterialMind()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.mindAtt;
         }
@@ -218,7 +219,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeStrength()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.strengthAtt;
         }
@@ -228,7 +229,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeDexterity()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.dexterityAtt;
         }
@@ -238,7 +239,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeConstitution()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.constitutionAtt;
         }
@@ -248,7 +249,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeIntelligence()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.intelligenceAtt;
         }
@@ -258,7 +259,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeWisdom()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.wisdomAtt;
         }
@@ -268,7 +269,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeFocus()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.focusAtt;
         }
@@ -278,7 +279,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeCharisma()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.charismaAtt;
         }
@@ -288,7 +289,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeLuck()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.luckAtt;
         }
@@ -298,7 +299,7 @@ public class DefinedWeapon : WeaponBase
     public override int CalculateWeaponTypeMind()
     {
         int total = 0;
-        for (int i = 0; i < weaponType.Length; i++)
+        for (int i = 0; i < weaponType.Count; i++)
         {
             total += this.weaponType[i].weaponTypeAttributeValues.mindAtt;
         }

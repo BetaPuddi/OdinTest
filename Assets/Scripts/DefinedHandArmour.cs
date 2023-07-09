@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "DefinedHandArmour", menuName = "Armour/HandArmour", order = 0)]
 public class DefinedHandArmour : ArmourBase
@@ -6,7 +8,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialMaxHealth()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxHealth;
         }
@@ -17,7 +19,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialMaxMana()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxMana;
         }
@@ -27,7 +29,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialMaxStamina()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxStamina;
         }
@@ -37,7 +39,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialMaxEnergy()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxEnergy;
         }
@@ -47,7 +49,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialMaxMagic()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxMagic;
         }
@@ -57,7 +59,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialStrength()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.strengthAtt;
         }
@@ -67,7 +69,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialDexterity()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.dexterityAtt;
         }
@@ -77,7 +79,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialConstitution()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.constitutionAtt;
         }
@@ -87,7 +89,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialIntelligence()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.intelligenceAtt;
         }
@@ -97,7 +99,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialWisdom()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.wisdomAtt;
         }
@@ -107,7 +109,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialFocus()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.focusAtt;
         }
@@ -117,7 +119,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialCharisma()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.charismaAtt;
         }
@@ -127,7 +129,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialLuck()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.luckAtt;
         }
@@ -137,7 +139,7 @@ public class DefinedHandArmour : ArmourBase
     public override int CalculateMaterialMind()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.mindAtt;
         }

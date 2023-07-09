@@ -9,13 +9,13 @@ public abstract class ArmourBase : InventoryItem
     //public ArmourType armourType;
     public int armourPrice;
 
-    public ComponentMaterial[] materials;
-    public DamageType[] damageTypes;
-    public ElementType[] elements;
+    public List<ComponentMaterial> materials = new List<ComponentMaterial>();
+    public List<DamageType> damageTypes = new List<DamageType>();
+    public List<ElementType> elements = new List<ElementType>();
     public AttackAndDefValues attackAndDefValues;
     public AttributeValues attributeValues;
     public ResourceValues resourceValues;
-    public Passive[] passives;
+    public List<Passive> passives = new List<Passive>();
 
     public abstract int CalculateMaterialMaxHealth();
     public abstract int CalculateMaterialMaxMana();
