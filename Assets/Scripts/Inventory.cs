@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-	public DefinedWeapon equippedWeapon = null;
-	
+    public DefinedWeapon equippedWeaponRight = null;
+    public DefinedWeapon equippedWeaponLeft = null;
+    public DefinedHeadArmour equippedHeadArmour = null;
+    public DefinedChestArmour equippedChestArmour = null;
+    public DefinedHandArmour equippedHandArmour = null;
+    public DefinedLegArmour equippedLegArmour = null;
+    public DefinedFeetArmour equippedFeetArmour = null;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

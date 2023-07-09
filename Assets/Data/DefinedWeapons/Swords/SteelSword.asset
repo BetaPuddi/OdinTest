@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92306eb564a1a4a4eb634dee2cf4fd33, type: 3}
+  m_Name: SteelSword
+  m_EditorClassIdentifier: 
+  weaponName: Steel Sword
+  description: A simple steel sword.
+  weaponType:
+  - {fileID: 11400000, guid: 08391c86fd6b61c4194d542cabea246b, type: 2}
+  range: Close
+  weaponPrice: 0
+  materials:
+  - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}
+  damageTypes:
+  - {fileID: 11400000, guid: 99b50a850fcaae24eadba5e3ef934ad9, type: 2}
+  elements:
+  - {fileID: 11400000, guid: 10f3caece53497744a25aa5104491774, type: 2}
+  attackAndDefValues: {fileID: 11400000, guid: 8cbd4e86c283c4f428a27f795a8a3a82, type: 2}
+  attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
+  resourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
+  passives: []
+  attackReplacement: {fileID: 11400000, guid: 97cea7398bdc7a34197150be7d51df26, type: 2}
+  totalMaxHealth: 0
+  weaponTypeMaxHealth: 0
+  materialsMaxHealth: 0

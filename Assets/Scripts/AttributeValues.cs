@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AttributeValues", menuName = "Attributes and Stats/AttributeValues", order = 0)]
+[CreateAssetMenu(fileName = "AttributeValues", menuName = "Attributes and Resources/AttributeValues", order = 0)]
 public class AttributeValues : ScriptableObject
 {
     //Physical Attributes

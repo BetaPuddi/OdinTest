@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce97110ee613be545a77a534cf6f9782, type: 3}
+  m_Name: Fist
+  m_EditorClassIdentifier: 
+  typeName: 
+  weaponTypeResourceValues: {fileID: 11400000, guid: ed042a6de0ff2854fab7c04b26fc229c, type: 2}
+  weaponTypeAttributeValues: {fileID: 11400000, guid: 7fd9cfa9f30b92842a347258c176ed46, type: 2}
