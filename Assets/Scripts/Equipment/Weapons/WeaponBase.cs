@@ -16,7 +16,7 @@ public abstract class WeaponBase : InventoryItem
         Close,
         Mid,
         Long
-    };
+    }
     public WeaponRange range;
     //How much the weapon costs
     public int weaponPrice;
