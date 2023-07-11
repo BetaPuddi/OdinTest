@@ -14,6 +14,7 @@ public class PlayerEquipmentPanel : MonoBehaviour
     void Start()
     {
         UpdateEquipment();
+        Inventory.OnUpdateUI += UpdateEquipment;
     }
 
     // Update is called once per frame

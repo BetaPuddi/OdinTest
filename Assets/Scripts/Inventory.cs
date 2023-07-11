@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public delegate void UpdateUI();
+    public static event UpdateUI OnUpdateUI;
     public WeaponBase equippedWeaponRight = null;
     public WeaponBase equippedWeaponLeft = null;
     public ArmourBase equippedHeadArmour = null;
@@ -17,6 +19,10 @@ public class Inventory : MonoBehaviour
     public void AddItem(InventoryItem item)
     {
         inventoryItems.Add(item);
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
+        }
     }
     public void RemoveItem(InventoryItem item)
     {
@@ -91,6 +97,10 @@ public class Inventory : MonoBehaviour
         else if (armour.armourType == ArmourBase.ArmourTypes.Feet)
         {
             equippedFeetArmour = armour;
+        }
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
         }
     }
     public ArmourBase GetHeadArmour()

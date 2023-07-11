@@ -12,6 +12,7 @@ public class PlayerInventoryPanel : MonoBehaviour
     void Start()
     {
         UpdateInventory();
+        Inventory.OnUpdateUI += UpdateInventory;
     }
 
     // Update is called once per frame
