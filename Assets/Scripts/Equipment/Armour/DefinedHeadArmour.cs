@@ -1,12 +1,14 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "DefinedChestArmour", menuName = "Armour/ChestArmour", order = 0)]
-public class DefinedChestArmour : ArmourBase
+[CreateAssetMenu(fileName = "DefinedHeadArmour", menuName = "Armour/HeadArmour", order = 0)]
+public class DefinedHeadArmour : ArmourBase
 {
-    public int CalculateMaterialMaxHealth()
+    public override int CalculateMaterialMaxHealth()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxHealth;
         }
@@ -14,130 +16,130 @@ public class DefinedChestArmour : ArmourBase
         return total;
     }
 
-    public int CalculateMaterialMaxMana()
+    public override int CalculateMaterialMaxMana()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxMana;
         }
         return total;
     }
 
-    public int CalculateMaterialMaxStamina()
+    public override int CalculateMaterialMaxStamina()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxStamina;
         }
         return total;
     }
 
-    public int CalculateMaterialMaxEnergy()
+    public override int CalculateMaterialMaxEnergy()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxEnergy;
         }
         return total;
     }
 
-    public int CalculateMaterialMaxMagic()
+    public override int CalculateMaterialMaxMagic()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialResourceValues.maxMagic;
         }
         return total;
     }
 
-    public int CalculateMaterialStrength()
+    public override int CalculateMaterialStrength()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.strengthAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialDexterity()
+    public override int CalculateMaterialDexterity()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.dexterityAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialConstitution()
+    public override int CalculateMaterialConstitution()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.constitutionAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialIntelligence()
+    public override int CalculateMaterialIntelligence()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.intelligenceAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialWisdom()
+    public override int CalculateMaterialWisdom()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.wisdomAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialFocus()
+    public override int CalculateMaterialFocus()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.focusAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialCharisma()
+    public override int CalculateMaterialCharisma()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.charismaAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialLuck()
+    public override int CalculateMaterialLuck()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.luckAtt;
         }
         return total;
     }
 
-    public int CalculateMaterialMind()
+    public override int CalculateMaterialMind()
     {
         int total = 0;
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             total += this.materials[i].materialAttributeValues.mindAtt;
         }

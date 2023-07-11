@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f67519519fe534191a0f711577ed9c, type: 3}
   m_Name: IronHeadArmour
   m_EditorClassIdentifier: 
-  armourName: Iron Helm
+  itemName: Iron Helmet
   armourDescription: 
+  armourType: 0
   armourPrice: 0
   materials:
   - {fileID: 11400000, guid: ceac6063273ab5445826ec93f4e1ae2c, type: 2}

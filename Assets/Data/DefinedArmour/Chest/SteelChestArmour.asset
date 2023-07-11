@@ -9,17 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92306eb564a1a4a4eb634dee2cf4fd33, type: 3}
-  m_Name: OakSword
+  m_Script: {fileID: 11500000, guid: 640aa0e63ef26dd4aaf1dc033120ec0c, type: 3}
+  m_Name: SteelChestArmour
   m_EditorClassIdentifier: 
-  itemName: Oak Sword
-  description: 
-  weaponType:
-  - {fileID: 11400000, guid: 08391c86fd6b61c4194d542cabea246b, type: 2}
-  range: Close
-  weaponPrice: 0
+  itemName: Steel Chest Armour
+  armourDescription: 
+  armourType: 1
+  armourPrice: 0
   materials:
-  - {fileID: 11400000, guid: 22306cfcb64cbd943ac37be39e30107b, type: 2}
+  - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}
+  - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}
   damageTypes:
   - {fileID: 11400000, guid: 99b50a850fcaae24eadba5e3ef934ad9, type: 2}
   elements:
@@ -28,4 +27,3 @@ MonoBehaviour:
   attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
   resourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
   passives: []
-  attackReplacement: {fileID: 11400000, guid: 97cea7398bdc7a34197150be7d51df26, type: 2}

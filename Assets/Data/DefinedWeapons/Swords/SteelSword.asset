@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92306eb564a1a4a4eb634dee2cf4fd33, type: 3}
   m_Name: SteelSword
   m_EditorClassIdentifier: 
-  weaponName: Steel Sword
+  itemName: Steel Sword
   description: A simple steel sword.
   weaponType:
   - {fileID: 11400000, guid: 08391c86fd6b61c4194d542cabea246b, type: 2}
@@ -29,6 +29,3 @@ MonoBehaviour:
   resourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
   passives: []
   attackReplacement: {fileID: 11400000, guid: 97cea7398bdc7a34197150be7d51df26, type: 2}
-  totalMaxHealth: 0
-  weaponTypeMaxHealth: 0
-  materialsMaxHealth: 0
