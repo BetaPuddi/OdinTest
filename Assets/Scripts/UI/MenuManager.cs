@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
 public class MenuManager : MonoBehaviour
 {
     public Player player = null;
@@ -36,7 +35,6 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         healthText.text = player.currentHealth.ToString() + " / " + player.maxHealth.ToString();
         manaText.text = player.currentMana.ToString() + " / " + player.maxMana.ToString();
         staminaText.text = player.currentStamina.ToString() + " / " + player.maxStamina.ToString();
