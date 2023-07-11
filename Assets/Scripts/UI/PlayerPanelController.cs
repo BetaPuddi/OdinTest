@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerPanelController : MonoBehaviour
 {
-    public GameObject playerAttributesPanel;
-    public GameObject playerResourcesPanel;
+    public GameObject playerStatsPanel;
     public GameObject playerInventoryPanel;
+    public GameObject playerEquipmentPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -21,25 +21,25 @@ public class PlayerPanelController : MonoBehaviour
 
     }
 
-    public void TogglePlayerAttributePanel()
+    public void TogglePlayerStatsPanel()
     {
-        playerAttributesPanel.SetActive(true);
-        playerResourcesPanel.SetActive(false);
+        playerStatsPanel.SetActive(true);
         playerInventoryPanel.SetActive(false);
-    }
-
-    public void TogglePlayerResourcePanel()
-    {
-        playerAttributesPanel.SetActive(false);
-        playerResourcesPanel.SetActive(true);
-        playerInventoryPanel.SetActive(false);
+        playerEquipmentPanel.SetActive(false);
     }
 
     public void TogglePlayerInventoryPanel()
     {
-        playerAttributesPanel.SetActive(false);
-        playerResourcesPanel.SetActive(false);
+        playerStatsPanel.SetActive(false);
         playerInventoryPanel.SetActive(true);
+        playerEquipmentPanel.SetActive(false);
+    }
+
+    public void TogglePlayerEquipmentPanel()
+    {
+        playerStatsPanel.SetActive(false);
+        playerInventoryPanel.SetActive(false);
+        playerEquipmentPanel.SetActive(true);
     }
 
 }
