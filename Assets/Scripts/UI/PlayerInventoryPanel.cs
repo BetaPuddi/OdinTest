@@ -7,7 +7,7 @@ public class PlayerInventoryPanel : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject itemPrefab;
     public Inventory inventory;
-    public List<GameObject> itemPrefabs = new List<GameObject>();
+    public List<GameObject> inventoryItemPrefabs = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +22,17 @@ public class PlayerInventoryPanel : MonoBehaviour
 
     public void UpdateInventory()
     {
-        foreach (GameObject prefab in itemPrefabs)
+        foreach (GameObject prefab in inventoryItemPrefabs)
         {
             Destroy(prefab);
         }
-        itemPrefabs.Clear();
+        inventoryItemPrefabs.Clear();
         foreach (InventoryItem inventoryItem in inventory.inventoryItems)
         {
             GameObject newInventoryItem = Instantiate(itemPrefab, inventoryPanel.transform) as GameObject;
             InventoryItemPrefab newItem = newInventoryItem.GetComponent<InventoryItemPrefab>();
             newItem.SetItem(inventoryItem);
-            itemPrefabs.Add(newInventoryItem);
+            inventoryItemPrefabs.Add(newInventoryItem);
         }
     }
 }
