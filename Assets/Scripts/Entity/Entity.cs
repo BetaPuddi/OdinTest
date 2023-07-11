@@ -27,17 +27,10 @@ public class Entity : MonoBehaviour
     public int luck;
     public int mind;
 
-
     public Inventory entityInventory;
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    void Start() { }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
+    void Update() { }
 }

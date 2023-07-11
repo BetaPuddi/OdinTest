@@ -10,16 +10,10 @@ public class PlayerPanelController : MonoBehaviour
     public GameObject playerEquipmentPanel;
 
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    void Start() { }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
+    void Update() { }
 
     public void TogglePlayerStatsPanel()
     {
@@ -41,5 +35,4 @@ public class PlayerPanelController : MonoBehaviour
         playerInventoryPanel.SetActive(false);
         playerEquipmentPanel.SetActive(true);
     }
-
 }
