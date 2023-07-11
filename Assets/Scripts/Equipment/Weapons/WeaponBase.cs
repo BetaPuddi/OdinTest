@@ -11,8 +11,13 @@ public abstract class WeaponBase : InventoryItem
     //Type of the weapon
     public List<WeaponType> weaponType = new List<WeaponType>();
     //Range of the weapon - Close, Mid, Long
-    public string range;
-
+    public enum WeaponRange
+    {
+        Close,
+        Mid,
+        Long
+    };
+    public WeaponRange range;
     //How much the weapon costs
     public int weaponPrice;
 
