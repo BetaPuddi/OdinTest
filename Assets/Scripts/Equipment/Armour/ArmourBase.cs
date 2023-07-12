@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class ArmourBase : InventoryItem
 {
-    public string armourDescription;
     //public ArmourType armourType;
     [SerializeField]
     public enum ArmourTypes

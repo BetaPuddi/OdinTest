@@ -5,9 +5,6 @@ using System.Collections;
 // Base class for all weapons
 public abstract class WeaponBase : InventoryItem
 {
-    //Description of the weapon
-    public string description;
-
     //Type of the weapon
     public List<WeaponType> weaponType = new List<WeaponType>();
     //Range of the weapon - Close, Mid, Long

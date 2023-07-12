@@ -5,6 +5,8 @@ using TMPro;
 
 public class EquippedItemPrefab : MonoBehaviour
 {
+    public delegate void ShowItemStats(InventoryItem item);
+    public static event ShowItemStats OnShowItemStats;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
     // Start is called before the first frame update
@@ -20,5 +22,12 @@ public class EquippedItemPrefab : MonoBehaviour
     {
         this.inventoryItem = inventoryItem;
         itemInSlotText.text = inventoryItem.itemName;
+    }
+    public void OnClick()
+    {
+        if (OnShowItemStats != null)
+        {
+            OnShowItemStats(inventoryItem);
+        }
     }
 }
