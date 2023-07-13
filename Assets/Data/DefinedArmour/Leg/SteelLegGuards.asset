@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
-  m_Name: SteelFeetArmour
+  m_Name: SteelLegGuards
   m_EditorClassIdentifier: 
-  itemName: Steel Boots
+  itemName: Steel Leg Guards
   itemDescription: 
   armourType: 4
   armourPrice: 0

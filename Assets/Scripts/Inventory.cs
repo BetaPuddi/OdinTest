@@ -27,10 +27,18 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(InventoryItem item)
     {
         inventoryItems.Remove(item);
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
+        }
     }
     public void RemoveAllItems()
     {
         inventoryItems.Clear();
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
+        }
     }
     public bool HasItem(InventoryItem item)
     {
@@ -62,6 +70,10 @@ public class Inventory : MonoBehaviour
     }
     public void SetRightWeapon(WeaponBase weapon)
     {
+        if (equippedWeaponLeft.itemName != "Empty")
+        {
+            AddItem(equippedWeaponRight);
+        }
         equippedWeaponRight = weapon;
         if (OnUpdateUI != null)
         {
@@ -74,6 +86,10 @@ public class Inventory : MonoBehaviour
     }
     public void SetLeftWeapon(WeaponBase weapon)
     {
+        if (equippedWeaponLeft.itemName != "Empty")
+        {
+            AddItem(equippedWeaponLeft);
+        }
         equippedWeaponLeft = weapon;
         if (OnUpdateUI != null)
         {
@@ -88,22 +104,42 @@ public class Inventory : MonoBehaviour
     {
         if (armour.armourType == ArmourBase.ArmourTypes.Head)
         {
+            if (equippedHeadArmour.itemName != "Empty")
+            {
+                AddItem(equippedHeadArmour);
+            }
             equippedHeadArmour = armour;
         }
         else if (armour.armourType == ArmourBase.ArmourTypes.Chest)
         {
+            if (equippedChestArmour.itemName != "Empty")
+            {
+                AddItem(equippedChestArmour);
+            }
             equippedChestArmour = armour;
         }
         else if (armour.armourType == ArmourBase.ArmourTypes.Hand)
         {
+            if (equippedHandArmour.itemName != "Empty")
+            {
+                AddItem(equippedHandArmour);
+            }
             equippedHandArmour = armour;
         }
         else if (armour.armourType == ArmourBase.ArmourTypes.Leg)
         {
+            if (equippedLegArmour.itemName != "Empty")
+            {
+                AddItem(equippedLegArmour);
+            }
             equippedLegArmour = armour;
         }
         else if (armour.armourType == ArmourBase.ArmourTypes.Feet)
         {
+            if (equippedFeetArmour.itemName != "Empty")
+            {
+                AddItem(equippedFeetArmour);
+            }
             equippedFeetArmour = armour;
         }
         if (OnUpdateUI != null)

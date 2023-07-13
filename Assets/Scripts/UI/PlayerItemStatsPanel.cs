@@ -99,14 +99,17 @@ public class PlayerItemStatsPanel : MonoBehaviour
     private void EquipArmour(InventoryItem item)
     {
         playerInventory.SetArmour(item as ArmourBase);
+        playerInventory.RemoveItem(item);
     }
     private void EquipLeftWeapon(InventoryItem item)
     {
         playerInventory.SetLeftWeapon(item as WeaponBase);
+        playerInventory.RemoveItem(item);
     }
     private void EquipRightWeapon(InventoryItem item)
     {
         playerInventory.SetRightWeapon(item as WeaponBase);
+        playerInventory.RemoveItem(item);
     }
     public void EquipArmourButton()
     {
