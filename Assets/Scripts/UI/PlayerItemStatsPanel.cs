@@ -8,6 +8,25 @@ public class PlayerItemStatsPanel : MonoBehaviour
     public InventoryItem itemToShow;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI healthText = null;
+    //public TextMeshProUGUI currentHealthText = null;
+    public TextMeshProUGUI manaText = null;
+    //public TextMeshProUGUI currentManaText = null;
+    public TextMeshProUGUI staminaText = null;
+    //public TextMeshProUGUI currentStaminaText = null;
+    public TextMeshProUGUI energyText = null;
+    //public TextMeshProUGUI currentEnergyText = null;
+    public TextMeshProUGUI magicText = null;
+    //public TextMeshProUGUI currentMagicText = null;
+    public TextMeshProUGUI strengthText = null;
+    public TextMeshProUGUI dexterityText = null;
+    public TextMeshProUGUI constitutionText = null;
+    public TextMeshProUGUI intelligenceText = null;
+    public TextMeshProUGUI wisdomText = null;
+    public TextMeshProUGUI focusText = null;
+    public TextMeshProUGUI charismaText = null;
+    public TextMeshProUGUI luckText = null;
+    public TextMeshProUGUI mindText = null;
 
     private void Start()
     {
@@ -21,6 +40,40 @@ public class PlayerItemStatsPanel : MonoBehaviour
         itemToShow = item;
         nameText.text = itemToShow.itemName;
         descriptionText.text = itemToShow.itemDescription;
+        if (itemToShow as WeaponBase == true)
+        {
+            healthText.text = "Health: " + ((itemToShow as WeaponBase).CalculateMaterialMaxHealth() + (itemToShow as WeaponBase).CalculateWeaponTypeMaxHealth()).ToString();
+            manaText.text = "Mana: " + ((itemToShow as WeaponBase).CalculateMaterialMaxMana() + (itemToShow as WeaponBase).CalculateWeaponTypeMaxMana()).ToString();
+            staminaText.text = "Stamina: " + ((itemToShow as WeaponBase).CalculateMaterialMaxStamina() + (itemToShow as WeaponBase).CalculateWeaponTypeMaxStamina()).ToString();
+            energyText.text = "Energy: " + ((itemToShow as WeaponBase).CalculateMaterialMaxEnergy() + (itemToShow as WeaponBase).CalculateWeaponTypeMaxEnergy()).ToString();
+            magicText.text = "Magic: " + ((itemToShow as WeaponBase).CalculateMaterialMaxEnergy() + (itemToShow as WeaponBase).CalculateWeaponTypeMaxEnergy()).ToString();
+            strengthText.text = "Strength: " + ((itemToShow as WeaponBase).CalculateMaterialStrength() + (itemToShow as WeaponBase).CalculateWeaponTypeStrength()).ToString();
+            dexterityText.text = "Dexterity: " + ((itemToShow as WeaponBase).CalculateMaterialDexterity() + (itemToShow as WeaponBase).CalculateWeaponTypeDexterity()).ToString();
+            constitutionText.text = "Constitution: " + ((itemToShow as WeaponBase).CalculateMaterialConstitution() + (itemToShow as WeaponBase).CalculateWeaponTypeConstitution()).ToString();
+            intelligenceText.text = "Intelligence: " + ((itemToShow as WeaponBase).CalculateMaterialIntelligence() + (itemToShow as WeaponBase).CalculateWeaponTypeIntelligence()).ToString();
+            wisdomText.text = "Wisdom: " + ((itemToShow as WeaponBase).CalculateMaterialWisdom() + (itemToShow as WeaponBase).CalculateWeaponTypeWisdom()).ToString();
+            focusText.text = "Focus: " + ((itemToShow as WeaponBase).CalculateMaterialFocus() + (itemToShow as WeaponBase).CalculateWeaponTypeFocus()).ToString();
+            charismaText.text = "Charisma: " + ((itemToShow as WeaponBase).CalculateMaterialCharisma() + (itemToShow as WeaponBase).CalculateWeaponTypeCharisma()).ToString();
+            luckText.text = "Luck: " + ((itemToShow as WeaponBase).CalculateMaterialLuck() + (itemToShow as WeaponBase).CalculateWeaponTypeLuck()).ToString();
+            mindText.text = "Mind: " + ((itemToShow as WeaponBase).CalculateMaterialMind() + (itemToShow as WeaponBase).CalculateWeaponTypeMind()).ToString();
+        }
+        else if (itemToShow as ArmourBase == true)
+        {
+            healthText.text = "Health: " + (itemToShow as ArmourBase).CalculateMaterialMaxHealth().ToString();
+            manaText.text = "Mana: " + (itemToShow as ArmourBase).CalculateMaterialMaxMana().ToString();
+            staminaText.text = "Stamina: " + (itemToShow as ArmourBase).CalculateMaterialMaxStamina().ToString();
+            energyText.text = "Energy: " + (itemToShow as ArmourBase).CalculateMaterialMaxEnergy().ToString();
+            magicText.text = "Magic: " + (itemToShow as ArmourBase).CalculateMaterialMaxEnergy().ToString();
+            strengthText.text = "Strength: " + (itemToShow as ArmourBase).CalculateMaterialStrength().ToString();
+            dexterityText.text = "Dexterity: " + (itemToShow as ArmourBase).CalculateMaterialDexterity().ToString();
+            constitutionText.text = "Constitution: " + (itemToShow as ArmourBase).CalculateMaterialConstitution().ToString();
+            intelligenceText.text = "Intelligence: " + (itemToShow as ArmourBase).CalculateMaterialIntelligence().ToString();
+            wisdomText.text = "Wisdom: " + (itemToShow as ArmourBase).CalculateMaterialWisdom().ToString();
+            focusText.text = "Focus: " + (itemToShow as ArmourBase).CalculateMaterialFocus().ToString();
+            charismaText.text = "Charisma: " + (itemToShow as ArmourBase).CalculateMaterialCharisma().ToString();
+            luckText.text = "Luck: " + (itemToShow as ArmourBase).CalculateMaterialLuck().ToString();
+            mindText.text = "Mind: " + (itemToShow as ArmourBase).CalculateMaterialMind().ToString();
+        }
     }
     public void ClosePanel()
     {
