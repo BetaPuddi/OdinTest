@@ -163,8 +163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1.433, y: -18.5}
-  m_SizeDelta: {x: 382.42, y: 30.66}
+  m_AnchoredPosition: {x: -11.31, y: -18.5}
+  m_SizeDelta: {x: 362.68, y: 30.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73170005
 MonoBehaviour:
@@ -531,8 +531,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1226, y: 1.5}
-  m_SizeDelta: {x: 439.07, y: 983}
+  m_AnchoredPosition: {x: -1211.6597, y: 1.5}
+  m_SizeDelta: {x: 410.38, y: 983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152652765
 MonoBehaviour:
@@ -584,6 +584,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea35cd13f2d5a54bbac678998ceef3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipLeftWepButton: {fileID: 1644971182}
+  equipRightWepButton: {fileID: 2007807323}
+  equipArmourButton: {fileID: 1672582867}
+  playerInventory: {fileID: 388755538}
   itemToShow: {fileID: 11400000, guid: 5d7c988ba04adf54b87fc809d3c43917, type: 2}
   nameText: {fileID: 887776153}
   descriptionText: {fileID: 338997903}
@@ -1419,7 +1423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.630005, y: -77.53003}
+  m_AnchoredPosition: {x: -0.7899933, y: -77.53003}
   m_SizeDelta: {x: 0, y: -558.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220143093
@@ -2611,7 +2615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 301, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 424.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394506127
@@ -4178,7 +4182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 92, y: -156}
+  m_AnchoredPosition: {x: 76.3, y: -156}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &633965293
@@ -4574,12 +4578,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 22
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -5384,12 +5388,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 22
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -6984,8 +6988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -151.751, y: -156}
-  m_SizeDelta: {x: 243.98999, y: 127.99}
+  m_AnchoredPosition: {x: -140.12, y: -156}
+  m_SizeDelta: {x: 250.35, y: 127.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100581240
 MonoBehaviour:
@@ -9549,7 +9553,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1644971185}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152652767}
+        m_TargetAssemblyTypeName: PlayerItemStatsPanel, Assembly-CSharp
+        m_MethodName: EquipLeftWeaponButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1644971185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9806,7 +9822,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672582870}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152652767}
+        m_TargetAssemblyTypeName: PlayerItemStatsPanel, Assembly-CSharp
+        m_MethodName: EquipArmourButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1672582870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10667,8 +10695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.629898, y: -384.41003}
-  m_SizeDelta: {x: -33.07, y: -805.28}
+  m_AnchoredPosition: {x: -0.7900543, y: -384.41003}
+  m_SizeDelta: {x: -4.3799, y: -805.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847698991
 MonoBehaviour:
@@ -10793,12 +10821,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 22
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11436,7 +11464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 205.4, y: 477.4}
+  m_AnchoredPosition: {x: 190.7, y: 477.4}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943893168
@@ -11885,7 +11913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2007807326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152652767}
+        m_TargetAssemblyTypeName: PlayerItemStatsPanel, Assembly-CSharp
+        m_MethodName: EquipRightWeaponButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2007807326
 MonoBehaviour:
   m_ObjectHideFlags: 0

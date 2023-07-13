@@ -63,6 +63,10 @@ public class Inventory : MonoBehaviour
     public void SetRightWeapon(WeaponBase weapon)
     {
         equippedWeaponRight = weapon;
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
+        }
     }
     public WeaponBase GetRightWeapon()
     {
@@ -71,6 +75,10 @@ public class Inventory : MonoBehaviour
     public void SetLeftWeapon(WeaponBase weapon)
     {
         equippedWeaponLeft = weapon;
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
+        }
     }
     public WeaponBase GetLeftWeapon()
     {

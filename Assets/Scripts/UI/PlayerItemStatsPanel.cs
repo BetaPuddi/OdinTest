@@ -5,6 +5,8 @@ using TMPro;
 
 public class PlayerItemStatsPanel : MonoBehaviour
 {
+    public GameObject equipLeftWepButton, equipRightWepButton, equipArmourButton;
+    public Inventory playerInventory;
     public InventoryItem itemToShow;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
@@ -34,6 +36,21 @@ public class PlayerItemStatsPanel : MonoBehaviour
         EquippedItemPrefab.OnClickItem += SetItem;
         this.gameObject.SetActive(true);
         this.gameObject.SetActive(false);
+    }
+    private void Update()
+    {
+        if (itemToShow as ArmourBase == true)
+        {
+            equipArmourButton.SetActive(true);
+            equipLeftWepButton.SetActive(false);
+            equipRightWepButton.SetActive(false);
+        }
+        else if (itemToShow as WeaponBase == true)
+        {
+            equipArmourButton.SetActive(false);
+            equipLeftWepButton.SetActive(true);
+            equipRightWepButton.SetActive(true);
+        }
     }
     public void SetItem(InventoryItem item)
     {
@@ -78,5 +95,29 @@ public class PlayerItemStatsPanel : MonoBehaviour
     public void ClosePanel()
     {
         this.gameObject.SetActive(false);
+    }
+    private void EquipArmour(InventoryItem item)
+    {
+        playerInventory.SetArmour(item as ArmourBase);
+    }
+    private void EquipLeftWeapon(InventoryItem item)
+    {
+        playerInventory.SetLeftWeapon(item as WeaponBase);
+    }
+    private void EquipRightWeapon(InventoryItem item)
+    {
+        playerInventory.SetRightWeapon(item as WeaponBase);
+    }
+    public void EquipArmourButton()
+    {
+        EquipArmour(itemToShow);
+    }
+    public void EquipLeftWeaponButton()
+    {
+        EquipLeftWeapon(itemToShow);
+    }
+    public void EquipRightWeaponButton()
+    {
+        EquipRightWeapon(itemToShow);
     }
 }
