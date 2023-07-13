@@ -20,4 +20,8 @@ public class PlayerItemStatsPanel : MonoBehaviour
         nameText.text = itemToShow.itemName;
         descriptionText.text = itemToShow.itemDescription;
     }
+    public void ClosePanel()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

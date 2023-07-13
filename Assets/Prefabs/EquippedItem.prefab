@@ -147,3 +147,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItem: {fileID: 11400000, guid: 5d7c988ba04adf54b87fc809d3c43917, type: 2}
   itemInSlotText: {fileID: 1563131506081309215}
+  playerItemStatsPanel: {fileID: 0}

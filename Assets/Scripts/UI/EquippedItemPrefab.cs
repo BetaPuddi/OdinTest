@@ -9,6 +9,7 @@ public class EquippedItemPrefab : MonoBehaviour
     public static event ShowItemStats OnShowItemStats;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
+    //public GameObject itemStatsPanel;
     // Start is called before the first frame update
     void Start() { }
 
@@ -29,5 +30,6 @@ public class EquippedItemPrefab : MonoBehaviour
         {
             OnShowItemStats(inventoryItem);
         }
+        //itemStatsPanel.SetActive(true);
     }
 }
