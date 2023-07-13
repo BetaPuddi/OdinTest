@@ -114,13 +114,16 @@ public class PlayerItemStatsPanel : MonoBehaviour
     public void EquipArmourButton()
     {
         EquipArmour(itemToShow);
+        ClosePanel();
     }
     public void EquipLeftWeaponButton()
     {
         EquipLeftWeapon(itemToShow);
+        ClosePanel();
     }
     public void EquipRightWeaponButton()
     {
         EquipRightWeapon(itemToShow);
+        ClosePanel();
     }
 }
