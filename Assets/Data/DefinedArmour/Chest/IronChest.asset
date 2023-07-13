@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
   m_Name: IronChest
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  armourType: 0
+  itemName: Iron Chest
+  itemDescription: Simple iron chest armour
+  armourType: 1
   armourPrice: 0
-  materials: []
-  damageTypes: []
-  elements: []
-  attackAndDefValues: {fileID: 0}
-  attributeValues: {fileID: 0}
-  resourceValues: {fileID: 0}
+  materials:
+  - {fileID: 11400000, guid: ceac6063273ab5445826ec93f4e1ae2c, type: 2}
+  - {fileID: 11400000, guid: ceac6063273ab5445826ec93f4e1ae2c, type: 2}
+  damageTypes:
+  - {fileID: 11400000, guid: 99b50a850fcaae24eadba5e3ef934ad9, type: 2}
+  elements:
+  - {fileID: 11400000, guid: 10f3caece53497744a25aa5104491774, type: 2}
+  attackAndDefValues: {fileID: 11400000, guid: 8cbd4e86c283c4f428a27f795a8a3a82, type: 2}
+  attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
+  resourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
   passives: []

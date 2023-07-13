@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Steel Leg Guards
   itemDescription: 
-  armourType: 4
+  armourType: 3
   armourPrice: 0
   materials:
   - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}

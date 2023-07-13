@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
   m_Name: Armour
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Empty
   itemDescription: 
   armourType: 0
   armourPrice: 0
