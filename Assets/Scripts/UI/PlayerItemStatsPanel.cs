@@ -11,8 +11,10 @@ public class PlayerItemStatsPanel : MonoBehaviour
 
     private void Start()
     {
-        InventoryItemPrefab.OnShowItemStats += SetItem;
-        EquippedItemPrefab.OnShowItemStats += SetItem;
+        InventoryItemPrefab.OnClickItem += SetItem;
+        EquippedItemPrefab.OnClickItem += SetItem;
+        this.gameObject.SetActive(true);
+        this.gameObject.SetActive(false);
     }
     public void SetItem(InventoryItem item)
     {

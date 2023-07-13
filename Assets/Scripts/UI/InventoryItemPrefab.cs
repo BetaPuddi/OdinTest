@@ -6,8 +6,10 @@ using TMPro;
 
 public class InventoryItemPrefab : MonoBehaviour
 {
-    public delegate void ShowItemStats(InventoryItem item);
-    public static event ShowItemStats OnShowItemStats;
+    public delegate void SetItemStats(InventoryItem item);
+    public static event SetItemStats OnClickItem;
+    public delegate void ShowItemPanel();
+    public static event ShowItemPanel OnShowItemPanel;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
     // Start is called before the first frame update
@@ -27,9 +29,13 @@ public class InventoryItemPrefab : MonoBehaviour
 
     public void OnClick()
     {
-        if (OnShowItemStats != null)
+        if (OnShowItemPanel != null)
         {
-            OnShowItemStats(inventoryItem);
+            OnShowItemPanel();
+        }
+        if (OnClickItem != null)
+        {
+            OnClickItem(inventoryItem);
         }
     }
 }

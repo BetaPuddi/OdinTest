@@ -5,8 +5,10 @@ using TMPro;
 
 public class EquippedItemPrefab : MonoBehaviour
 {
+    public delegate void ShowItemPanel();
+    public static event ShowItemPanel OnShowItemPanel;
     public delegate void ShowItemStats(InventoryItem item);
-    public static event ShowItemStats OnShowItemStats;
+    public static event ShowItemStats OnClickItem;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
     //public GameObject itemStatsPanel;
@@ -26,10 +28,13 @@ public class EquippedItemPrefab : MonoBehaviour
     }
     public void OnClick()
     {
-        if (OnShowItemStats != null)
+        if (OnShowItemPanel != null)
         {
-            OnShowItemStats(inventoryItem);
+            OnShowItemPanel();
         }
-        //itemStatsPanel.SetActive(true);
+        if (OnClickItem != null)
+        {
+            OnClickItem(inventoryItem);
+        }
     }
 }
