@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SteelSword
   m_EditorClassIdentifier: 
   itemName: Steel Sword
-  description: A simple steel sword.
+  itemDescription: A simple steel sword.
   weaponType:
   - {fileID: 11400000, guid: 08391c86fd6b61c4194d542cabea246b, type: 2}
-  range: Close
+  range: 0
   weaponPrice: 0
   materials:
   - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}

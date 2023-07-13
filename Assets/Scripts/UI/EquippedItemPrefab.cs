@@ -5,8 +5,13 @@ using TMPro;
 
 public class EquippedItemPrefab : MonoBehaviour
 {
+    public delegate void ShowItemPanel();
+    public static event ShowItemPanel OnShowItemPanel;
+    public delegate void ShowItemStats(InventoryItem item);
+    public static event ShowItemStats OnClickItem;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
+    //public GameObject itemStatsPanel;
     // Start is called before the first frame update
     void Start() { }
 
@@ -20,5 +25,16 @@ public class EquippedItemPrefab : MonoBehaviour
     {
         this.inventoryItem = inventoryItem;
         itemInSlotText.text = inventoryItem.itemName;
+    }
+    public void OnClick()
+    {
+        if (OnShowItemPanel != null)
+        {
+            OnShowItemPanel();
+        }
+        if (OnClickItem != null)
+        {
+            OnClickItem(inventoryItem);
+        }
     }
 }
