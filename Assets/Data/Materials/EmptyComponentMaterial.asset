@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EmptyComponentMaterial
   m_EditorClassIdentifier: 
   componentMaterialName: 
-  materialStatValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
+  materialResourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
   materialAttributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}

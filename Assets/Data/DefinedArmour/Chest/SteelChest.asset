@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f67519519fe534191a0f711577ed9c, type: 3}
-  m_Name: IronHeadArmour
+  m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
+  m_Name: SteelChest
   m_EditorClassIdentifier: 
-  itemName: Iron Helmet
-  armourDescription: 
-  armourType: 0
+  itemName: Steel Chest Armour
+  itemDescription: 
+  armourType: 1
   armourPrice: 0
   materials:
-  - {fileID: 11400000, guid: ceac6063273ab5445826ec93f4e1ae2c, type: 2}
+  - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}
+  - {fileID: 11400000, guid: 305dfe412c799364a964139009bbe2e7, type: 2}
   damageTypes:
   - {fileID: 11400000, guid: 99b50a850fcaae24eadba5e3ef934ad9, type: 2}
   elements:

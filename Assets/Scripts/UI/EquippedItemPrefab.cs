@@ -9,8 +9,13 @@ public class EquippedItemPrefab : MonoBehaviour
     public static event ShowItemPanel OnShowItemPanel;
     public delegate void ShowItemStats(InventoryItem item);
     public static event ShowItemStats OnClickItem;
+    public delegate void IsEquippedCheck(bool isEquipped);
+    public static event IsEquippedCheck OnIsEquippedCheck;
+    public delegate void SetItemIndex(int index);
+    public static event SetItemIndex OnSetItemIndex;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
+    public int itemIndex;
     //public GameObject itemStatsPanel;
     // Start is called before the first frame update
     void Start() { }
@@ -35,6 +40,14 @@ public class EquippedItemPrefab : MonoBehaviour
         if (OnClickItem != null)
         {
             OnClickItem(inventoryItem);
+        }
+        if (OnIsEquippedCheck != null)
+        {
+            OnIsEquippedCheck(true);
+        }
+        if (OnSetItemIndex != null)
+        {
+            OnSetItemIndex(itemIndex);
         }
     }
 }

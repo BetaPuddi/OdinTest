@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a34580e5865c534eb0ef687466ddca1, type: 3}
-  m_Name: IronLegArmour
+  m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
+  m_Name: IronChest
   m_EditorClassIdentifier: 
-  itemName: Iron Leg Guards
-  armourDescription: 
-  armourType: 3
+  itemName: Iron Chest
+  itemDescription: Simple iron chest armour
+  armourType: 1
   armourPrice: 0
   materials:
   - {fileID: 11400000, guid: ceac6063273ab5445826ec93f4e1ae2c, type: 2}
