@@ -13,9 +13,31 @@ public class Inventory : MonoBehaviour
     public ArmourBase equippedHandArmour = null;
     public ArmourBase equippedLegArmour = null;
     public ArmourBase equippedFeetArmour = null;
+    private WeaponBase emptyWeapon;
+    private ArmourBase emptyArmour;
 
+    public List<InventoryItem> equippedItems = new List<InventoryItem>();
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
+    void Start()
+    {
+        UpdateEquippedList();
+        var emptyItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/items/empty");
+        emptyItemAssetBundle.LoadAllAssets();
+        emptyWeapon = emptyItemAssetBundle.LoadAsset<WeaponBase>("EmptyWeapon");
+        emptyArmour = emptyItemAssetBundle.LoadAsset<ArmourBase>("EmptyArmour");
+    }
+    public void UpdateEquippedList()
+    {
+        equippedItems.Clear();
+        equippedItems.Insert(0, equippedWeaponRight as InventoryItem);
+        equippedItems.Insert(1, equippedWeaponLeft as InventoryItem);
+        equippedItems.Insert(2, equippedHeadArmour as InventoryItem);
+        equippedItems.Insert(3, equippedChestArmour as InventoryItem);
+        equippedItems.Insert(4, equippedHandArmour as InventoryItem);
+        equippedItems.Insert(5, equippedLegArmour as InventoryItem);
+        equippedItems.Insert(6, equippedFeetArmour as InventoryItem);
+    }
     public void AddItem(InventoryItem item)
     {
         inventoryItems.Add(item);
@@ -70,7 +92,7 @@ public class Inventory : MonoBehaviour
     }
     public void SetRightWeapon(WeaponBase weapon)
     {
-        if (equippedWeaponLeft.itemName != "Empty")
+        if (equippedWeaponRight.itemName != "Empty")
         {
             AddItem(equippedWeaponRight);
         }
@@ -168,5 +190,42 @@ public class Inventory : MonoBehaviour
     public ArmourBase GetFeetArmour()
     {
         return equippedFeetArmour;
+    }
+    public void UnequipItem(int index)
+    {
+        equippedItems[index] = null;
+        if (index == 0)
+        {
+            equippedWeaponRight = emptyWeapon;
+        }
+        else if (index == 1)
+        {
+            equippedWeaponLeft = emptyWeapon;
+        }
+        else if (index == 2)
+        {
+            equippedHeadArmour = emptyArmour;
+        }
+        else if (index == 3)
+        {
+            equippedChestArmour = emptyArmour;
+        }
+        else if (index == 4)
+        {
+            equippedHandArmour = emptyArmour;
+        }
+        else if (index == 5)
+        {
+            equippedLegArmour = emptyArmour;
+        }
+        else if (index == 6)
+        {
+            equippedFeetArmour = emptyArmour;
+        }
+        UpdateEquippedList();
+        if (OnUpdateUI != null)
+        {
+            OnUpdateUI();
+        }
     }
 }

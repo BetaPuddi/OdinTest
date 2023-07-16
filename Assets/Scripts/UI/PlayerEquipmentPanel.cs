@@ -30,17 +30,27 @@ public class PlayerEquipmentPanel : MonoBehaviour
         equippedItems.Insert(4, equipment.equippedHandArmour);
         equippedItems.Insert(5, equipment.equippedLegArmour);
         equippedItems.Insert(6, equipment.equippedFeetArmour);
+
         foreach (GameObject equipmentItem in equipmentItemPrefabs)
         {
             Destroy(equipmentItem);
         }
         equipmentItemPrefabs.Clear();
+        /*foreach (InventoryItem item in equipment.equippedItems)
+        {
+            GameObject equipmentItem = Instantiate(equipmentItemPrefab, equipmentPanel.transform) as GameObject;
+            EquippedItemPrefab newItem = equipmentItem.GetComponent<EquippedItemPrefab>();
+            newItem.SetItem(item);
+            newItem.itemIndex = equipmentItemPrefabs.;
+            equipmentItemPrefabs.Add(equipmentItem);
+        }*/
         for (int i = 0; i < equippedItems.Count; i++)
         {
             GameObject equipmentItem = Instantiate(equipmentItemPrefab, equipmentPanel.transform) as GameObject;
             EquippedItemPrefab newItem = equipmentItem.GetComponent<EquippedItemPrefab>();
             newItem.SetItem(equippedItems[i]);
             equipmentItemPrefabs.Add(equipmentItem);
+            equipmentItemPrefabs[i].GetComponent<EquippedItemPrefab>().itemIndex = i;
         }
     }
 }

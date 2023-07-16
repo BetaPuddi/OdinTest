@@ -10,6 +10,8 @@ public class InventoryItemPrefab : MonoBehaviour
     public static event SetItemStats OnClickItem;
     public delegate void ShowItemPanel();
     public static event ShowItemPanel OnShowItemPanel;
+    public delegate void IsEquippedCheck(bool isEquipped);
+    public static event IsEquippedCheck OnIsEquippedCheck;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
     // Start is called before the first frame update
@@ -36,6 +38,10 @@ public class InventoryItemPrefab : MonoBehaviour
         if (OnClickItem != null)
         {
             OnClickItem(inventoryItem);
+        }
+        if (OnIsEquippedCheck != null)
+        {
+            OnIsEquippedCheck(false);
         }
     }
 }

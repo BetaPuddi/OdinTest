@@ -5,11 +5,13 @@ using TMPro;
 
 public class PlayerItemStatsPanel : MonoBehaviour
 {
-    public GameObject equipLeftWepButton, equipRightWepButton, equipArmourButton;
+    public GameObject equipLeftWepButton, equipRightWepButton, equipArmourButton, unequipButton;
     public Inventory playerInventory;
     public InventoryItem itemToShow;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
+    public bool isItemEquipped;
+    public int equippedItemIndex;
     public TextMeshProUGUI healthText = null;
     //public TextMeshProUGUI currentHealthText = null;
     public TextMeshProUGUI manaText = null;
@@ -33,23 +35,42 @@ public class PlayerItemStatsPanel : MonoBehaviour
     private void Start()
     {
         InventoryItemPrefab.OnClickItem += SetItem;
+        InventoryItemPrefab.OnIsEquippedCheck += EquippedCheck;
         EquippedItemPrefab.OnClickItem += SetItem;
+        EquippedItemPrefab.OnIsEquippedCheck += EquippedCheck;
+        EquippedItemPrefab.OnSetItemIndex += GetItemIndex;
         this.gameObject.SetActive(true);
         this.gameObject.SetActive(false);
     }
     private void Update()
     {
-        if (itemToShow as ArmourBase == true)
+        if (isItemEquipped == true && itemToShow.itemName != "Empty")
+        {
+            unequipButton.SetActive(true);
+            equipLeftWepButton.SetActive(false);
+            equipRightWepButton.SetActive(false);
+            equipArmourButton.SetActive(false);
+        }
+        else if (isItemEquipped == true && itemToShow.itemName == "Empty")
+        {
+            unequipButton.SetActive(false);
+            equipLeftWepButton.SetActive(false);
+            equipRightWepButton.SetActive(false);
+            equipArmourButton.SetActive(false);
+        }
+        else if (itemToShow as ArmourBase == true)
         {
             equipArmourButton.SetActive(true);
             equipLeftWepButton.SetActive(false);
             equipRightWepButton.SetActive(false);
+            unequipButton.SetActive(false);
         }
         else if (itemToShow as WeaponBase == true)
         {
             equipArmourButton.SetActive(false);
             equipLeftWepButton.SetActive(true);
             equipRightWepButton.SetActive(true);
+            unequipButton.SetActive(false);
         }
     }
     public void SetItem(InventoryItem item)
@@ -92,6 +113,10 @@ public class PlayerItemStatsPanel : MonoBehaviour
             mindText.text = "Mind: " + (itemToShow as ArmourBase).CalculateMaterialMind().ToString();
         }
     }
+    public void GetItemIndex(int index)
+    {
+        equippedItemIndex = index;
+    }
     public void ClosePanel()
     {
         this.gameObject.SetActive(false);
@@ -111,6 +136,11 @@ public class PlayerItemStatsPanel : MonoBehaviour
         playerInventory.SetRightWeapon(item as WeaponBase);
         playerInventory.RemoveItem(item);
     }
+    private void UnequipItem(InventoryItem item)
+    {
+        playerInventory.AddItem(item);
+        playerInventory.UnequipItem(equippedItemIndex);
+    }
     public void EquipArmourButton()
     {
         EquipArmour(itemToShow);
@@ -124,6 +154,15 @@ public class PlayerItemStatsPanel : MonoBehaviour
     public void EquipRightWeaponButton()
     {
         EquipRightWeapon(itemToShow);
+        ClosePanel();
+    }
+    public void EquippedCheck(bool isEquipped)
+    {
+        isItemEquipped = isEquipped;
+    }
+    public void UnequipButton()
+    {
+        UnequipItem(itemToShow);
         ClosePanel();
     }
 }
