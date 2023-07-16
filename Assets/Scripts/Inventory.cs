@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
+[System.Serializable]
 public class Inventory : MonoBehaviour
 {
     public delegate void UpdateUI();
@@ -38,9 +40,14 @@ public class Inventory : MonoBehaviour
         equippedItems.Insert(5, equippedLegArmour as InventoryItem);
         equippedItems.Insert(6, equippedFeetArmour as InventoryItem);
     }
+    public void SortInventoryItems()
+    {
+        inventoryItems = inventoryItems.OrderBy(x => x.name).ToList();
+    }
     public void AddItem(InventoryItem item)
     {
         inventoryItems.Add(item);
+        SortInventoryItems();
         if (OnUpdateUI != null)
         {
             OnUpdateUI();
@@ -49,6 +56,7 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(InventoryItem item)
     {
         inventoryItems.Remove(item);
+        SortInventoryItems();
         if (OnUpdateUI != null)
         {
             OnUpdateUI();
@@ -101,6 +109,7 @@ public class Inventory : MonoBehaviour
         {
             OnUpdateUI();
         }
+        UpdateEquippedList();
     }
     public WeaponBase GetRightWeapon()
     {
@@ -117,6 +126,7 @@ public class Inventory : MonoBehaviour
         {
             OnUpdateUI();
         }
+        UpdateEquippedList();
     }
     public WeaponBase GetLeftWeapon()
     {
@@ -168,6 +178,7 @@ public class Inventory : MonoBehaviour
         {
             OnUpdateUI();
         }
+        UpdateEquippedList();
     }
     public ArmourBase GetHeadArmour()
     {

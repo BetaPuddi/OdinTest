@@ -14,8 +14,12 @@ public class InventoryItemPrefab : MonoBehaviour
     public static event IsEquippedCheck OnIsEquippedCheck;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
+    public int sortingNumber;
     // Start is called before the first frame update
-    void Start() { }
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,6 +46,18 @@ public class InventoryItemPrefab : MonoBehaviour
         if (OnIsEquippedCheck != null)
         {
             OnIsEquippedCheck(false);
+        }
+    }
+
+    private void AssignSortingNumber()
+    {
+        if (inventoryItem.GetType() == typeof(DefinedWeapon))
+        {
+            sortingNumber = 0;
+        }
+        else if (inventoryItem.GetType() == typeof(DefinedArmour))
+        {
+            sortingNumber = 1;
         }
     }
 }
