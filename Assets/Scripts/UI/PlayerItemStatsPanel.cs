@@ -44,6 +44,7 @@ public class PlayerItemStatsPanel : MonoBehaviour
     }
     private void Update()
     {
+        // Checks if the item is equipped and what type of item it is and displays the correct buttons
         if (isItemEquipped == true && itemToShow.itemName != "Empty")
         {
             unequipButton.SetActive(true);
@@ -78,6 +79,7 @@ public class PlayerItemStatsPanel : MonoBehaviour
         itemToShow = item;
         nameText.text = itemToShow.itemName;
         descriptionText.text = itemToShow.itemDescription;
+        // Checks if the item class is WeaponBase or ArmourBase and calls the appropriate functions
         if (itemToShow as WeaponBase == true)
         {
             healthText.text = "Health: " + ((itemToShow as WeaponBase).CalculateMaterialMaxHealth() + (itemToShow as WeaponBase).CalculateWeaponTypeMaxHealth() + (itemToShow as WeaponBase).resourceValues.maxHealth).ToString();

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
+    // Base class for all entities. Including players, enemies, etc.
     public string entityName;
     // STAT VALUES
     public int maxHealth;

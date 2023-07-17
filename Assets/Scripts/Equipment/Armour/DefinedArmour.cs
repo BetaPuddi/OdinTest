@@ -5,6 +5,9 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "DefinedArmour", menuName = "Item/Defined Armour", order = 0)]
 public class DefinedArmour : ArmourBase
 {
+    /** These calculate stats for the armour from the materials
+    * Resources first, then attributes
+    */
     public override int CalculateMaterialMaxHealth()
     {
         int total = 0;

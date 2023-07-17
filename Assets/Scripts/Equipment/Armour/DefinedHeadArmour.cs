@@ -2,9 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "DefinedHeadArmour", menuName = "Armour/HeadArmour", order = 0)]
+//[CreateAssetMenu(fileName = "DefinedHeadArmour", menuName = "Armour/HeadArmour", order = 0)]
 public class DefinedHeadArmour : ArmourBase
 {
+    //! Class not currently used.
     public override int CalculateMaterialMaxHealth()
     {
         int total = 0;
