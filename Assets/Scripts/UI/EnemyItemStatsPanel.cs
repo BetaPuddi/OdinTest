@@ -34,11 +34,11 @@ public class EnemyItemStatsPanel : MonoBehaviour
 
     private void Start()
     {
-        InventoryItemPrefab.OnClickItem += SetItem;
-        InventoryItemPrefab.OnIsEquippedCheck += EquippedCheck;
-        EquippedItemPrefab.OnClickItem += SetItem;
-        EquippedItemPrefab.OnIsEquippedCheck += EquippedCheck;
-        EquippedItemPrefab.OnSetItemIndex += GetItemIndex;
+        InventoryItemPrefab.OnClickEnemyItem += SetItem;
+        InventoryItemPrefab.OnIsEnemyItemEquippedCheck += EquippedCheck;
+        EquippedItemPrefab.OnClickEnemyItem += SetItem;
+        EquippedItemPrefab.OnIsEnemyItemEquippedCheck += EquippedCheck;
+        EquippedItemPrefab.OnSetEnemyItemIndex += GetItemIndex;
         this.gameObject.SetActive(true);
         this.gameObject.SetActive(false);
     }

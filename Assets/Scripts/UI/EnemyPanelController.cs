@@ -12,8 +12,8 @@ public class EnemyPanelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InventoryItemPrefab.OnShowItemPanel += ToggleEnemyItemStatsPanel;
-        EquippedItemPrefab.OnShowItemPanel += ToggleEnemyItemStatsPanel;
+        InventoryItemPrefab.OnShowEnemyItemPanel += ToggleEnemyItemStatsPanel;
+        EquippedItemPrefab.OnShowEnemyItemPanel += ToggleEnemyItemStatsPanel;
     }
 
     // Update is called once per frame

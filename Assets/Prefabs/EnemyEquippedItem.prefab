@@ -137,6 +137,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 11400000, guid: 5d7c988ba04adf54b87fc809d3c43917, type: 2}
   itemInSlotText: {fileID: 8266140082761639524}
   itemIndex: 0
+  isEnemyItem: 1
 --- !u!114 &8266140082761639524 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3309236649849261248, guid: ff3c87f498c8f3049be63848262fb270, type: 3}
