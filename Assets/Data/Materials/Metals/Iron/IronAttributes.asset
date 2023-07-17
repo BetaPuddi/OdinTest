@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strengthAtt: 8
   dexterityAtt: 2
-  constitutionAtt: 4
+  constitutionAtt: 6
   intelligenceAtt: -10
   wisdomAtt: 0
   focusAtt: 0

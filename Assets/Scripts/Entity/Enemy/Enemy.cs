@@ -6,6 +6,29 @@ public class Enemy : Entity
     void Start()
     {
         this.entityInventory = this.GetComponent<Inventory>();
+        this.currentHealth = this.maxHealth;
+        this.currentMana = this.maxMana;
+        this.currentStamina = this.maxStamina;
+        this.currentEnergy = this.maxEnergy;
+        this.currentMagic = this.maxMagic;
+    }
+    private void Update()
+    {
+        this.maxHealth = CalculateEntityMaxHealthFromWeapons() + CalculateEntityMaxHealthFromArmour();
+        this.maxMana = CalculateEntityMaxManaFromWeapons() + CalculateEntityMaxManaFromArmour();
+        this.maxStamina = CalculateEntityMaxStaminaFromWeapons() + CalculateEntityMaxStaminaFromArmour();
+        this.maxEnergy = CalculateEntityMaxEnergyFromWeapons() + CalculateEntityMaxEnergyFromArmour();
+        this.maxMagic = CalculateEntityMaxMagicFromWeapons() + CalculateEntityMaxMagicFromArmour();
+
+        this.strength = CalculateEntityStrengthFromWeapons() + CalculateEntityStrengthFromArmour();
+        this.dexterity = CalculateEntityDexterityFromWeapons() + CalculateEntityDexterityFromArmour();
+        this.constitution = CalculateEntityConstitutionFromWeapons() + CalculateEntityConstitutionFromArmour();
+        this.intelligence = CalculateEntityIntelligenceFromWeapons() + CalculateEntityIntelligenceFromArmour();
+        this.wisdom = CalculateEntityWisdomFromWeapons() + CalculateEntityWisdomFromArmour();
+        this.focus = CalculateEntityFocusFromWeapons() + CalculateEntityFocusFromArmour();
+        this.charisma = CalculateEntityCharismaFromWeapons() + CalculateEntityCharismaFromArmour();
+        this.luck = CalculateEntityLuckFromWeapons() + CalculateEntityLuckFromArmour();
+        this.mind = CalculateEntityMindFromWeapons() + CalculateEntityMindFromArmour();
     }
     // Resource Calculations
     #region Resource Calculations

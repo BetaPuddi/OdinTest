@@ -24,10 +24,9 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         UpdateEquippedList();
-        var emptyItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/items/empty");
-        emptyItemAssetBundle.LoadAllAssets();
+        /*var emptyItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/items/empty");
         emptyWeapon = emptyItemAssetBundle.LoadAsset<WeaponBase>("EmptyWeapon");
-        emptyArmour = emptyItemAssetBundle.LoadAsset<ArmourBase>("EmptyArmour");
+        emptyArmour = emptyItemAssetBundle.LoadAsset<ArmourBase>("EmptyArmour");*/
     }
     public void UpdateEquippedList()
     {
@@ -204,6 +203,9 @@ public class Inventory : MonoBehaviour
     }
     public void UnequipItem(int index)
     {
+        var emptyItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/items/empty");
+        emptyWeapon = emptyItemAssetBundle.LoadAsset<WeaponBase>("EmptyWeapon");
+        emptyArmour = emptyItemAssetBundle.LoadAsset<ArmourBase>("EmptyArmour");
         equippedItems[index] = null;
         if (index == 0)
         {
@@ -238,5 +240,6 @@ public class Inventory : MonoBehaviour
         {
             OnUpdateUI();
         }
+        emptyItemAssetBundle.Unload(true);
     }
 }
