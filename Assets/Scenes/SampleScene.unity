@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afd75d9c8d45ce40a6e3351f8f3e5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 166984671}
+  inventoryPanel: {fileID: 616028487}
   itemPrefab: {fileID: 738628963210782488, guid: ff3c87f498c8f3049be63848262fb270, type: 3}
   inventory: {fileID: 1674788576}
   inventoryItemPrefabs: []
@@ -4489,7 +4489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 0, y: 424.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394506127
@@ -15458,7 +15458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipment: {fileID: 1674788576}
-  equipmentPanel: {fileID: 1475550654}
+  equipmentPanel: {fileID: 2121284904}
   equipmentItemPrefab: {fileID: 6132737827615952316, guid: 3b942fe1aecb40942860ce7184073e50, type: 3}
   equipmentItemPrefabs: []
   equippedItems: []
@@ -20378,7 +20378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 0, y: 424.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920331277
