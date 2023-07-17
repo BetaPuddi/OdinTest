@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    // Start is called before the first frame update
+    // Inherits stats and name from Entity
     void Start()
     {
-        this.entityInventory = this.GetComponent<Inventory>();
+        this.entityInventory = this.GetComponent<Inventory>();// Get the inventory component attached to the game object
 
+        // TODO: Replace current health initialization
         this.currentHealth = this.maxHealth;
         this.currentMana = this.maxMana;
         this.currentStamina = this.maxStamina;
@@ -19,6 +20,7 @@ public class Player : Entity
     // Update is called once per frame
     void Update()
     {
+        // These set all the stats for the enemy from the weapon and armour scriptable objects 
         this.maxHealth = CalculateEntityMaxHealthFromWeapons() + CalculateEntityMaxHealthFromArmour();
         this.maxMana = CalculateEntityMaxManaFromWeapons() + CalculateEntityMaxManaFromArmour();
         this.maxStamina = CalculateEntityMaxStaminaFromWeapons() + CalculateEntityMaxStaminaFromArmour();
@@ -36,6 +38,10 @@ public class Player : Entity
         this.mind = CalculateEntityMindFromWeapons() + CalculateEntityMindFromArmour();
     }
 
+    /** Resource Calculations
+    * These two sections calculate the stats from the weapon and armour scriptable objects' materials, types, and extra scriptable objects
+    * Resources are calculated first, then the attributes
+    */
     // Resource Calculations
     #region Resource Calculations
     public override int CalculateEntityMaxHealthFromWeapons()

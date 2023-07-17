@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ArmourBase : InventoryItem
 {
-    //public ArmourType armourType;
+    // Sets armour type
     [SerializeField]
     public enum ArmourTypes
     {
@@ -12,7 +12,8 @@ public abstract class ArmourBase : InventoryItem
         Chest,
         Hand,
         Leg,
-        Feet
+        Feet,
+        Empty
     }
     public ArmourTypes armourType;
     public int armourPrice;

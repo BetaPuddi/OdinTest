@@ -20,11 +20,17 @@ public class EnemyInventoryPanel : MonoBehaviour
 
     public void UpdateInventory()
     {
+        // Destroys prefabs
         foreach (GameObject prefab in inventoryItemPrefabs)
         {
             Destroy(prefab);
         }
+        // Clears prefab list
         inventoryItemPrefabs.Clear();
+        /** Creates prefabs and adds them to the list
+        *   Sets the inventory items to the prefabs
+        *
+        */
         foreach (InventoryItem inventoryItem in inventory.inventoryItems)
         {
             GameObject newInventoryItem = Instantiate(itemPrefab, inventoryPanel.transform) as GameObject;

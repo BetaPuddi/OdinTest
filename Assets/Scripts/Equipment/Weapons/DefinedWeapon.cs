@@ -6,13 +6,6 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "DefinedWeapon", menuName = "Item/Defined Weapon", order = 0)]
 public class DefinedWeapon : WeaponBase
 {
-    private void OnEnable()
-    {
-        //materialsMaxHealth = CalculateMaterialResources();
-        //weaponTypeMaxHealth = CalculateWeaponTypeResources();
-        //totalMaxHealth = CalculateWeaponResourcesTotals();
-    }
-
     // Calculate resources
     public override int CalculateMaterialMaxHealth()
     {
