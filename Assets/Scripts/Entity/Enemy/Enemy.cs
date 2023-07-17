@@ -1,23 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Player : Entity
+public class Enemy : Entity
 {
-    // Start is called before the first frame update
     void Start()
     {
         this.entityInventory = this.GetComponent<Inventory>();
-
         this.currentHealth = this.maxHealth;
         this.currentMana = this.maxMana;
         this.currentStamina = this.maxStamina;
         this.currentEnergy = this.maxEnergy;
         this.currentMagic = this.maxMagic;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         this.maxHealth = CalculateEntityMaxHealthFromWeapons() + CalculateEntityMaxHealthFromArmour();
         this.maxMana = CalculateEntityMaxManaFromWeapons() + CalculateEntityMaxManaFromArmour();
@@ -35,7 +30,6 @@ public class Player : Entity
         this.luck = CalculateEntityLuckFromWeapons() + CalculateEntityLuckFromArmour();
         this.mind = CalculateEntityMindFromWeapons() + CalculateEntityMindFromArmour();
     }
-
     // Resource Calculations
     #region Resource Calculations
     public override int CalculateEntityMaxHealthFromWeapons()

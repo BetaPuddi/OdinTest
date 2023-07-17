@@ -12,9 +12,16 @@ public class InventoryItemPrefab : MonoBehaviour
     public static event ShowItemPanel OnShowItemPanel;
     public delegate void IsEquippedCheck(bool isEquipped);
     public static event IsEquippedCheck OnIsEquippedCheck;
+    public delegate void SetEnemyItemStats(InventoryItem item);
+    public static event SetEnemyItemStats OnClickEnemyItem;
+    public delegate void ShowEnemyItemPanel();
+    public static event ShowEnemyItemPanel OnShowEnemyItemPanel;
+    public delegate void IsEnemyItemEquippedCheck(bool isEquipped);
+    public static event IsEnemyItemEquippedCheck OnIsEnemyItemEquippedCheck;
     public InventoryItem inventoryItem = null;
     public TextMeshProUGUI itemInSlotText;
     public int sortingNumber;
+    public bool isEnemyItem;
     // Start is called before the first frame update
     void Start()
     { }
@@ -33,17 +40,35 @@ public class InventoryItemPrefab : MonoBehaviour
 
     public void OnClick()
     {
-        if (OnShowItemPanel != null)
+        if (isEnemyItem == false)
         {
-            OnShowItemPanel();
+            if (OnShowItemPanel != null)
+            {
+                OnShowItemPanel();
+            }
+            if (OnClickItem != null)
+            {
+                OnClickItem(inventoryItem);
+            }
+            if (OnIsEquippedCheck != null)
+            {
+                OnIsEquippedCheck(false);
+            }
         }
-        if (OnClickItem != null)
+        else if (isEnemyItem == true)
         {
-            OnClickItem(inventoryItem);
-        }
-        if (OnIsEquippedCheck != null)
-        {
-            OnIsEquippedCheck(false);
+            if (OnShowEnemyItemPanel != null)
+            {
+                OnShowEnemyItemPanel();
+            }
+            if (OnClickEnemyItem != null)
+            {
+                OnClickEnemyItem(inventoryItem);
+            }
+            if (OnIsEnemyItemEquippedCheck != null)
+            {
+                OnIsEnemyItemEquippedCheck(false);
+            }
         }
     }
 

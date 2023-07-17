@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+public abstract class Entity : MonoBehaviour
 {
+    public string entityName;
     // STAT VALUES
     public int maxHealth;
     public int currentHealth;
@@ -28,9 +29,32 @@ public class Entity : MonoBehaviour
     public int mind;
 
     public Inventory entityInventory;
-    // Start is called before the first frame update
-    void Start() { }
-
-    // Update is called once per frame
-    void Update() { }
+    public abstract int CalculateEntityMaxHealthFromWeapons();
+    public abstract int CalculateEntityMaxManaFromWeapons();
+    public abstract int CalculateEntityMaxStaminaFromWeapons();
+    public abstract int CalculateEntityMaxEnergyFromWeapons();
+    public abstract int CalculateEntityMaxMagicFromWeapons();
+    public abstract int CalculateEntityMaxHealthFromArmour();
+    public abstract int CalculateEntityMaxManaFromArmour();
+    public abstract int CalculateEntityMaxStaminaFromArmour();
+    public abstract int CalculateEntityMaxEnergyFromArmour();
+    public abstract int CalculateEntityMaxMagicFromArmour();
+    public abstract int CalculateEntityStrengthFromWeapons();
+    public abstract int CalculateEntityDexterityFromWeapons();
+    public abstract int CalculateEntityConstitutionFromWeapons();
+    public abstract int CalculateEntityIntelligenceFromWeapons();
+    public abstract int CalculateEntityWisdomFromWeapons();
+    public abstract int CalculateEntityFocusFromWeapons();
+    public abstract int CalculateEntityCharismaFromWeapons();
+    public abstract int CalculateEntityLuckFromWeapons();
+    public abstract int CalculateEntityMindFromWeapons();
+    public abstract int CalculateEntityStrengthFromArmour();
+    public abstract int CalculateEntityDexterityFromArmour();
+    public abstract int CalculateEntityConstitutionFromArmour();
+    public abstract int CalculateEntityIntelligenceFromArmour();
+    public abstract int CalculateEntityWisdomFromArmour();
+    public abstract int CalculateEntityFocusFromArmour();
+    public abstract int CalculateEntityCharismaFromArmour();
+    public abstract int CalculateEntityLuckFromArmour();
+    public abstract int CalculateEntityMindFromArmour();
 }
