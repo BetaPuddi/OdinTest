@@ -6,6 +6,7 @@ using TMPro;
 public class EnemyStatsPanel : MonoBehaviour
 {
     public Enemy enemy = null;
+    public TextMeshProUGUI nameText = null;
     public TextMeshProUGUI healthText = null;
     //public TextMeshProUGUI currentHealthText = null;
     public TextMeshProUGUI manaText = null;
@@ -50,5 +51,6 @@ public class EnemyStatsPanel : MonoBehaviour
         charismaText.text = enemy.charisma.ToString();
         luckText.text = enemy.luck.ToString();
         mindText.text = enemy.mind.ToString();
+        nameText.text = enemy.entityName;
     }
 }

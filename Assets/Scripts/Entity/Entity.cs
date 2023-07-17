@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
+    public string entityName;
     // STAT VALUES
     public int maxHealth;
     public int currentHealth;

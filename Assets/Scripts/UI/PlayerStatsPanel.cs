@@ -6,6 +6,7 @@ using TMPro;
 public class PlayerStatsPanel : MonoBehaviour
 {
     public Player player = null;
+    public TextMeshProUGUI nameText = null;
     public TextMeshProUGUI healthText = null;
     //public TextMeshProUGUI currentHealthText = null;
     public TextMeshProUGUI manaText = null;
@@ -50,5 +51,6 @@ public class PlayerStatsPanel : MonoBehaviour
         charismaText.text = player.charisma.ToString();
         luckText.text = player.luck.ToString();
         mindText.text = player.mind.ToString();
+        nameText.text = player.entityName;
     }
 }
