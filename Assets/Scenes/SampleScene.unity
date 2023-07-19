@@ -1633,9 +1633,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afd75d9c8d45ce40a6e3351f8f3e5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
   inventoryPanel: {fileID: 616028487}
   itemPrefab: {fileID: 738628963210782488, guid: ff3c87f498c8f3049be63848262fb270, type: 3}
-  inventory: {fileID: 1674788576}
+  inventory: {fileID: 0}
   inventoryItemPrefabs: []
 --- !u!114 &166984675
 MonoBehaviour:
@@ -8478,7 +8479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab96b26b96bbbba43800f21b0befa461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyInventory: {fileID: 1674788576}
+  enemyInventory: {fileID: 0}
   itemToShow: {fileID: 11400000, guid: 5d7c988ba04adf54b87fc809d3c43917, type: 2}
   nameText: {fileID: 215244919}
   descriptionText: {fileID: 164629281}
@@ -11242,7 +11243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9487b84199d8c224fa1dc8b9bc9e835b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyItemAssetBundle: {fileID: 0}
+  blankItemAssetBundle: {fileID: 0}
 --- !u!4 &883783815
 Transform:
   m_ObjectHideFlags: 0
@@ -14659,10 +14660,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6741627511542236260, guid: 0172851de7a5c894387b5e2358ce0459, type: 3}
-      propertyPath: maxHealth
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17178,7 +17175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f65f51c13ef4a34e91db1fd6d39b659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipment: {fileID: 1674788576}
+  equipment: {fileID: 0}
   equipmentPanel: {fileID: 2121284904}
   equipmentItemPrefab: {fileID: 6132737827615952316, guid: 3b942fe1aecb40942860ce7184073e50, type: 3}
   equipmentItemPrefabs: []
@@ -19249,17 +19246,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3694763259125388832, guid: 0172851de7a5c894387b5e2358ce0459, type: 3}
   m_PrefabInstance: {fileID: 8423065715556655537}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1674788576 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1874356032527279763, guid: 0172851de7a5c894387b5e2358ce0459, type: 3}
-  m_PrefabInstance: {fileID: 8423065715556655537}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2297b1e984baed54ebf607d0a25eb680, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1674788577 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6741627511542236260, guid: 0172851de7a5c894387b5e2358ce0459, type: 3}
@@ -26082,7 +26068,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6741627511542236260, guid: 0172851de7a5c894387b5e2358ce0459, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a72cfb2db4c3174193577b4a8d727f9, type: 2}
+    m_RemovedComponents:
+    - {fileID: 1874356032527279763, guid: 0172851de7a5c894387b5e2358ce0459, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
