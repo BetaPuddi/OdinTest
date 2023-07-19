@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResourceBundleManager : MonoBehaviour
 {
-    public AssetBundle emptyItemAssetBundle;
+    public AssetBundle blankItemAssetBundle;
     public static ResourceBundleManager Instance { get; private set; }
     private void Awake()
     {
@@ -18,10 +18,10 @@ public class ResourceBundleManager : MonoBehaviour
         {
             Instance = this;
         }
-        LoadEmptyItems();
+        LoadblankItems();
     }
-    public void LoadEmptyItems()
+    public void LoadblankItems()
     {
-        emptyItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/items/empty");
+        blankItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/blank");
     }
 }

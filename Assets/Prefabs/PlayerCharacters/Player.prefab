@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5554699894898307861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5139724784654184122}
+  - component: {fileID: 2615475552550120056}
+  - component: {fileID: 8445498736491618530}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5139724784654184122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554699894898307861}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.349852, y: -2.4797153, z: 1.6787188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2615475552550120056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554699894898307861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c126d340d43e5448da17681482ca6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityName: Player
+  maxHealth: 0
+  currentHealth: 0
+  maxMana: 0
+  currentMana: 0
+  maxStamina: 0
+  currentStamina: 0
+  maxEnergy: 0
+  currentEnergy: 0
+  maxMagic: 0
+  currentMagic: 0
+  strength: 0
+  dexterity: 0
+  constitution: 0
+  intelligence: 0
+  wisdom: 0
+  focus: 0
+  charisma: 0
+  luck: 0
+  mind: 0
+  entityInventory: {fileID: 0}
+--- !u!114 &8445498736491618530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554699894898307861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2297b1e984baed54ebf607d0a25eb680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equippedWeaponRight: {fileID: 11400000, guid: 82ce8d609b0647740af27d61d5d05d8f, type: 2}
+  equippedWeaponLeft: {fileID: 11400000, guid: 5d7c988ba04adf54b87fc809d3c43917, type: 2}
+  equippedHeadArmour: {fileID: 11400000, guid: a74e89efe30007b4bbb911597969d221, type: 2}
+  equippedChestArmour: {fileID: 11400000, guid: 14e90ea6115c91a488ed26930ead88b3, type: 2}
+  equippedHandArmour: {fileID: 11400000, guid: d2b13948cd9f4ce418119b925db1ef36, type: 2}
+  equippedLegArmour: {fileID: 11400000, guid: ed512781a0a84154f9217b2671ead627, type: 2}
+  equippedFeetArmour: {fileID: 11400000, guid: 5bd9c22b704d6314b8e5e123904fc04f, type: 2}
+  equippedItems: []
+  inventoryItems:
+  - {fileID: 11400000, guid: 739cea065f77b2442a4a8d04acf60333, type: 2}
+  - {fileID: 11400000, guid: 82ce8d609b0647740af27d61d5d05d8f, type: 2}
+  - {fileID: 11400000, guid: 6a4f23325faf2f84eb9fc66075369936, type: 2}
+  - {fileID: 11400000, guid: a74e89efe30007b4bbb911597969d221, type: 2}
+  - {fileID: 11400000, guid: afc1be0d6120b5d4eadcb9a2956892db, type: 2}
+  - {fileID: 11400000, guid: d2b13948cd9f4ce418119b925db1ef36, type: 2}
+  - {fileID: 11400000, guid: ed512781a0a84154f9217b2671ead627, type: 2}
+  - {fileID: 11400000, guid: 991262fe5ce525b4495bd619361e0ff6, type: 2}

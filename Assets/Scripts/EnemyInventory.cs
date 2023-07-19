@@ -1,10 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
 [System.Serializable]
-public class Inventory : MonoBehaviour
+[CreateAssetMenu(fileName = "EnemyInventory", menuName = "Defined Inventory/Enemy Inventory", order = 0)]
+public class EnemyInventory : ScriptableObject
 {
     public delegate void UpdateUI();
     public static event UpdateUI OnUpdateUI;
@@ -21,6 +22,10 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> equippedItems = new List<InventoryItem>();
     public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
+    private void OnValidate()
+    {
+        UpdateEquippedList();
+    }
     void Start()
     {
         UpdateEquippedList();
@@ -204,8 +209,8 @@ public class Inventory : MonoBehaviour
     }
     public void UnequipItem(int index)
     {
-        blankWeapon = ResourceBundleManager.Instance.blankItemAssetBundle.LoadAsset<WeaponBase>("BlankWeapon");
-        blankArmour = ResourceBundleManager.Instance.blankItemAssetBundle.LoadAsset<ArmourBase>("BlankArmour");
+        blankWeapon = ResourceBundleManager.Instance.blankItemAssetBundle.LoadAsset<WeaponBase>("EmptyWeapon");
+        blankArmour = ResourceBundleManager.Instance.blankItemAssetBundle.LoadAsset<ArmourBase>("EmptyArmour");
         equippedItems[index] = null;
         if (index == 0)
         {

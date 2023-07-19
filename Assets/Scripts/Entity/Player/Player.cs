@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : Entity
 {
     // Inherits stats and name from Entity
+    public Inventory entityInventory;
     void Start()
     {
         this.entityInventory = this.GetComponent<Inventory>();// Get the inventory component attached to the game object

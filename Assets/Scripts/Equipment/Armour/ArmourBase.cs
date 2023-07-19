@@ -10,8 +10,8 @@ public abstract class ArmourBase : InventoryItem
     {
         Head,
         Chest,
-        Hand,
-        Leg,
+        Hands,
+        Legs,
         Feet,
         Empty
     }

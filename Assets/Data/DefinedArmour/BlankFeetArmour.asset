@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92306eb564a1a4a4eb634dee2cf4fd33, type: 3}
-  m_Name: EmptyWeapon
+  m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
+  m_Name: BlankFeetArmour
   m_EditorClassIdentifier: 
   itemName: Empty
   itemDescription: 
-  weaponType:
-  - {fileID: 11400000, guid: 153e533c893adeb4c84b2b174855b695, type: 2}
-  range: 0
-  weaponPrice: 0
+  sortingPosition: 5
+  armourType: 4
+  armourPrice: 0
   materials:
   - {fileID: 11400000, guid: 0d38fc987b9ef3644a613f991ff86d88, type: 2}
   damageTypes:
@@ -28,4 +27,3 @@ MonoBehaviour:
   attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
   resourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
   passives: []
-  attackReplacement: {fileID: 11400000, guid: 1550d822205236846bfa5d7a239f90eb, type: 2}

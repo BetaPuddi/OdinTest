@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
-  m_Name: EmptyArmour
+  m_Name: BlankLegArmour
   m_EditorClassIdentifier: 
   itemName: Empty
   itemDescription: 
-  armourType: 0
+  sortingPosition: 4
+  armourType: 3
   armourPrice: 0
   materials:
   - {fileID: 11400000, guid: 0d38fc987b9ef3644a613f991ff86d88, type: 2}

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Steel Chest Armour
   itemDescription: 
+  sortingPosition: 2
   armourType: 1
   armourPrice: 0
   materials:

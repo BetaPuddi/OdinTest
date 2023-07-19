@@ -19,6 +19,7 @@ public class PlayerInventoryPanel : MonoBehaviour
     // Update is called once per frame
     void Update() { }
 
+    [ContextMenu("Update Inventory")]
     public void UpdateInventory()
     {
         foreach (GameObject prefab in inventoryItemPrefabs)

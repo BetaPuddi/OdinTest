@@ -29,7 +29,7 @@ public abstract class Entity : MonoBehaviour
     public int luck;
     public int mind;
 
-    public Inventory entityInventory;
+    //public Inventory entityInventory;
     public abstract int CalculateEntityMaxHealthFromWeapons();
     public abstract int CalculateEntityMaxManaFromWeapons();
     public abstract int CalculateEntityMaxStaminaFromWeapons();

@@ -5,6 +5,39 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "DefinedArmour", menuName = "Item/Defined Armour", order = 0)]
 public class DefinedArmour : ArmourBase
 {
+    private void Start()
+    {
+        SetSortingPosition();
+    }
+
+    private void OnValidate()
+    {
+        SetSortingPosition();
+    }
+    public void SetSortingPosition()
+    {
+        if (this.armourType == ArmourTypes.Head)
+        {
+            sortingPosition = 1;
+        }
+        else if (this.armourType == ArmourTypes.Chest)
+        {
+            sortingPosition = 2;
+        }
+        else if (this.armourType == ArmourTypes.Hands)
+        {
+            sortingPosition = 3;
+        }
+        else if (this.armourType == ArmourTypes.Legs)
+        {
+            sortingPosition = 4;
+        }
+        else if (this.armourType == ArmourTypes.Feet)
+        {
+            sortingPosition = 5;
+        }
+    }
+
     /** These calculate stats for the armour from the materials
     * Resources first, then attributes
     */

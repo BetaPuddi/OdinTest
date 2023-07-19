@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemyInventoryPanel : MonoBehaviour
 {
+    public Enemy enemy = null;
     public GameObject inventoryPanel;
     public GameObject itemPrefab;
-    public Inventory inventory;
+    public EnemyInventory inventory;
     public List<GameObject> inventoryItemPrefabs = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
+        inventory = enemy.inventory;
         UpdateInventory();
         Inventory.OnUpdateUI += UpdateInventory;
     }
@@ -18,6 +20,7 @@ public class EnemyInventoryPanel : MonoBehaviour
     // Update is called once per frame
     void Update() { }
 
+    [ContextMenu("Update Inventory")]
     public void UpdateInventory()
     {
         // Destroys prefabs

@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+CRC: 941058688
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b08033b5d508a108cb3f4d3266b7288e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 41794635ae33fafc776007eb161e6512
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: ce97110ee613be545a77a534cf6f9782, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 541538133ef4ced4894edd1d3de9b14b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 06cd0cf9b3741d54f8c664af99dec654, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 14ad6c5751651fb4f9606d33377edc6c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f6b693be9dab5c743b2a9a6f2b5b098f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 32b5fa02b63b0d147840b780b99b7f43, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ca63f0777febc6d4aa953e8d23c7c673, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 92306eb564a1a4a4eb634dee2cf4fd33, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c9a542f9b95297b4c8b0e75b9729aa32, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/DefinedArmour/BlankChestArmour.asset
+- Assets/Data/DefinedArmour/BlankLegArmour.asset
+- Assets/Data/WeaponTypes/BlankWeaponType.asset
+- Assets/Data/DamageTypes/BlankDamageType.asset
+- Assets/Data/BlankResources.asset
+- Assets/Data/DefinedArmour/BlankFeetArmour.asset
+- Assets/Data/DefinedArmour/BlankHandArmour.asset
+- Assets/Data/Actions/BlankAction.asset
+- Assets/Data/BlankAttackAndDefValues.asset
+- Assets/Data/DefinedWeapons/BlankWeapon.asset
+- Assets/Data/BlankAttributes.asset
+- Assets/Data/DefinedArmour/BlankHeadArmour.asset
+- Assets/Data/Materials/BlankComponentMaterial.asset
+- Assets/Data/Elements/BlankElementType.asset
+Dependencies: []

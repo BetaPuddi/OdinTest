@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
+    public EnemyInventory inventory;
     // Inherits stats and name from Entity
     void Start()
     {
-        this.entityInventory = this.GetComponent<Inventory>(); // Get the inventory component attached to the game object
+        //this.inventory = this.GetComponent<EInventory>(); // Get the inventory component attached to the game object
 
         // TODO: Replace current health initialization
         this.currentHealth = this.maxHealth;
@@ -44,9 +45,9 @@ public class Enemy : Entity
     {
         int total = 0;
 
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxHealth() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxHealth() + this.entityInventory.equippedWeaponRight.resourceValues.maxHealth;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialMaxHealth() + this.inventory.equippedWeaponRight.CalculateWeaponTypeMaxHealth() + this.inventory.equippedWeaponRight.resourceValues.maxHealth;
 
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxHealth() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxHealth() + this.entityInventory.equippedWeaponLeft.resourceValues.maxHealth;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialMaxHealth() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeMaxHealth() + this.inventory.equippedWeaponLeft.resourceValues.maxHealth;
 
         return total;
     }
@@ -54,32 +55,32 @@ public class Enemy : Entity
     public override int CalculateEntityMaxManaFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxMana() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxMana() + this.entityInventory.equippedWeaponRight.resourceValues.maxMana;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxMana() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxMana() + this.entityInventory.equippedWeaponLeft.resourceValues.maxMana;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialMaxMana() + this.inventory.equippedWeaponRight.CalculateWeaponTypeMaxMana() + this.inventory.equippedWeaponRight.resourceValues.maxMana;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialMaxMana() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeMaxMana() + this.inventory.equippedWeaponLeft.resourceValues.maxMana;
         return total;
     }
 
     public override int CalculateEntityMaxStaminaFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxStamina() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxStamina() + this.entityInventory.equippedWeaponRight.resourceValues.maxStamina;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxStamina() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxStamina() + this.entityInventory.equippedWeaponLeft.resourceValues.maxStamina;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialMaxStamina() + this.inventory.equippedWeaponRight.CalculateWeaponTypeMaxStamina() + this.inventory.equippedWeaponRight.resourceValues.maxStamina;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialMaxStamina() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeMaxStamina() + this.inventory.equippedWeaponLeft.resourceValues.maxStamina;
         return total;
     }
 
     public override int CalculateEntityMaxEnergyFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxEnergy() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxEnergy() + this.entityInventory.equippedWeaponRight.resourceValues.maxEnergy;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxEnergy() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxEnergy() + this.entityInventory.equippedWeaponLeft.resourceValues.maxEnergy;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialMaxEnergy() + this.inventory.equippedWeaponRight.CalculateWeaponTypeMaxEnergy() + this.inventory.equippedWeaponRight.resourceValues.maxEnergy;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialMaxEnergy() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeMaxEnergy() + this.inventory.equippedWeaponLeft.resourceValues.maxEnergy;
         return total;
     }
 
     public override int CalculateEntityMaxMagicFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMaxMagic() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMaxMagic() + this.entityInventory.equippedWeaponRight.resourceValues.maxMagic;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMaxMagic() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMaxMagic() + this.entityInventory.equippedWeaponLeft.resourceValues.maxMagic;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialMaxMagic() + this.inventory.equippedWeaponRight.CalculateWeaponTypeMaxMagic() + this.inventory.equippedWeaponRight.resourceValues.maxMagic;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialMaxMagic() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeMaxMagic() + this.inventory.equippedWeaponLeft.resourceValues.maxMagic;
         return total;
     }
 
@@ -87,8 +88,8 @@ public class Enemy : Entity
     {
         int total = 0;
 
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxHealth() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxHealth();
-        total += this.entityInventory.equippedHeadArmour.resourceValues.maxHealth + this.entityInventory.equippedChestArmour.resourceValues.maxHealth + this.entityInventory.equippedHandArmour.resourceValues.maxHealth + this.entityInventory.equippedLegArmour.resourceValues.maxHealth + this.entityInventory.equippedFeetArmour.resourceValues.maxHealth;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialMaxHealth() + this.inventory.equippedChestArmour.CalculateMaterialMaxHealth() + this.inventory.equippedHandArmour.CalculateMaterialMaxHealth() + this.inventory.equippedLegArmour.CalculateMaterialMaxHealth() + this.inventory.equippedFeetArmour.CalculateMaterialMaxHealth();
+        total += this.inventory.equippedHeadArmour.resourceValues.maxHealth + this.inventory.equippedChestArmour.resourceValues.maxHealth + this.inventory.equippedHandArmour.resourceValues.maxHealth + this.inventory.equippedLegArmour.resourceValues.maxHealth + this.inventory.equippedFeetArmour.resourceValues.maxHealth;
 
         return total;
     }
@@ -96,32 +97,32 @@ public class Enemy : Entity
     public override int CalculateEntityMaxManaFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxMana() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxMana();
-        total += this.entityInventory.equippedHeadArmour.resourceValues.maxMana + this.entityInventory.equippedChestArmour.resourceValues.maxMana + this.entityInventory.equippedHandArmour.resourceValues.maxMana + this.entityInventory.equippedLegArmour.resourceValues.maxMana + this.entityInventory.equippedFeetArmour.resourceValues.maxMana;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialMaxMana() + this.inventory.equippedChestArmour.CalculateMaterialMaxMana() + this.inventory.equippedHandArmour.CalculateMaterialMaxMana() + this.inventory.equippedLegArmour.CalculateMaterialMaxMana() + this.inventory.equippedFeetArmour.CalculateMaterialMaxMana();
+        total += this.inventory.equippedHeadArmour.resourceValues.maxMana + this.inventory.equippedChestArmour.resourceValues.maxMana + this.inventory.equippedHandArmour.resourceValues.maxMana + this.inventory.equippedLegArmour.resourceValues.maxMana + this.inventory.equippedFeetArmour.resourceValues.maxMana;
         return total;
     }
 
     public override int CalculateEntityMaxStaminaFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxStamina() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxStamina();
-        total += this.entityInventory.equippedHeadArmour.resourceValues.maxStamina + this.entityInventory.equippedChestArmour.resourceValues.maxStamina + this.entityInventory.equippedHandArmour.resourceValues.maxStamina + this.entityInventory.equippedLegArmour.resourceValues.maxStamina + this.entityInventory.equippedFeetArmour.resourceValues.maxStamina;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialMaxStamina() + this.inventory.equippedChestArmour.CalculateMaterialMaxStamina() + this.inventory.equippedHandArmour.CalculateMaterialMaxStamina() + this.inventory.equippedLegArmour.CalculateMaterialMaxStamina() + this.inventory.equippedFeetArmour.CalculateMaterialMaxStamina();
+        total += this.inventory.equippedHeadArmour.resourceValues.maxStamina + this.inventory.equippedChestArmour.resourceValues.maxStamina + this.inventory.equippedHandArmour.resourceValues.maxStamina + this.inventory.equippedLegArmour.resourceValues.maxStamina + this.inventory.equippedFeetArmour.resourceValues.maxStamina;
         return total;
     }
 
     public override int CalculateEntityMaxEnergyFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxEnergy() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxEnergy();
-        total += this.entityInventory.equippedHeadArmour.resourceValues.maxEnergy + this.entityInventory.equippedChestArmour.resourceValues.maxEnergy + this.entityInventory.equippedHandArmour.resourceValues.maxEnergy + this.entityInventory.equippedLegArmour.resourceValues.maxEnergy + this.entityInventory.equippedFeetArmour.resourceValues.maxEnergy;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialMaxEnergy() + this.inventory.equippedChestArmour.CalculateMaterialMaxEnergy() + this.inventory.equippedHandArmour.CalculateMaterialMaxEnergy() + this.inventory.equippedLegArmour.CalculateMaterialMaxEnergy() + this.inventory.equippedFeetArmour.CalculateMaterialMaxEnergy();
+        total += this.inventory.equippedHeadArmour.resourceValues.maxEnergy + this.inventory.equippedChestArmour.resourceValues.maxEnergy + this.inventory.equippedHandArmour.resourceValues.maxEnergy + this.inventory.equippedLegArmour.resourceValues.maxEnergy + this.inventory.equippedFeetArmour.resourceValues.maxEnergy;
         return total;
     }
 
     public override int CalculateEntityMaxMagicFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedChestArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedHandArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedLegArmour.CalculateMaterialMaxMagic() + this.entityInventory.equippedFeetArmour.CalculateMaterialMaxMagic();
-        total += this.entityInventory.equippedHeadArmour.resourceValues.maxMagic + this.entityInventory.equippedChestArmour.resourceValues.maxMagic + this.entityInventory.equippedHandArmour.resourceValues.maxMagic + this.entityInventory.equippedLegArmour.resourceValues.maxMagic + this.entityInventory.equippedFeetArmour.resourceValues.maxMagic;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialMaxMagic() + this.inventory.equippedChestArmour.CalculateMaterialMaxMagic() + this.inventory.equippedHandArmour.CalculateMaterialMaxMagic() + this.inventory.equippedLegArmour.CalculateMaterialMaxMagic() + this.inventory.equippedFeetArmour.CalculateMaterialMaxMagic();
+        total += this.inventory.equippedHeadArmour.resourceValues.maxMagic + this.inventory.equippedChestArmour.resourceValues.maxMagic + this.inventory.equippedHandArmour.resourceValues.maxMagic + this.inventory.equippedLegArmour.resourceValues.maxMagic + this.inventory.equippedFeetArmour.resourceValues.maxMagic;
         return total;
     }
     #endregion
@@ -131,144 +132,144 @@ public class Enemy : Entity
     public override int CalculateEntityStrengthFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialStrength() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeStrength() + this.entityInventory.equippedWeaponRight.attributeValues.strengthAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialStrength() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeStrength() + this.entityInventory.equippedWeaponLeft.attributeValues.strengthAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialStrength() + this.inventory.equippedWeaponRight.CalculateWeaponTypeStrength() + this.inventory.equippedWeaponRight.attributeValues.strengthAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialStrength() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeStrength() + this.inventory.equippedWeaponLeft.attributeValues.strengthAtt;
         return total;
     }
 
     public override int CalculateEntityDexterityFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialDexterity() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeDexterity() + this.entityInventory.equippedWeaponRight.attributeValues.dexterityAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialDexterity() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeDexterity() + this.entityInventory.equippedWeaponLeft.attributeValues.dexterityAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialDexterity() + this.inventory.equippedWeaponRight.CalculateWeaponTypeDexterity() + this.inventory.equippedWeaponRight.attributeValues.dexterityAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialDexterity() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeDexterity() + this.inventory.equippedWeaponLeft.attributeValues.dexterityAtt;
         return total;
     }
 
     public override int CalculateEntityConstitutionFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialConstitution() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeConstitution() + this.entityInventory.equippedWeaponRight.attributeValues.constitutionAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialConstitution() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeConstitution() + this.entityInventory.equippedWeaponLeft.attributeValues.constitutionAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialConstitution() + this.inventory.equippedWeaponRight.CalculateWeaponTypeConstitution() + this.inventory.equippedWeaponRight.attributeValues.constitutionAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialConstitution() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeConstitution() + this.inventory.equippedWeaponLeft.attributeValues.constitutionAtt;
         return total;
     }
 
     public override int CalculateEntityIntelligenceFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialIntelligence() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeIntelligence() + this.entityInventory.equippedWeaponRight.attributeValues.intelligenceAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialIntelligence() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeIntelligence() + this.entityInventory.equippedWeaponLeft.attributeValues.intelligenceAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialIntelligence() + this.inventory.equippedWeaponRight.CalculateWeaponTypeIntelligence() + this.inventory.equippedWeaponRight.attributeValues.intelligenceAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialIntelligence() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeIntelligence() + this.inventory.equippedWeaponLeft.attributeValues.intelligenceAtt;
         return total;
     }
 
     public override int CalculateEntityWisdomFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialWisdom() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeWisdom() + this.entityInventory.equippedWeaponRight.attributeValues.wisdomAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialWisdom() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeWisdom() + this.entityInventory.equippedWeaponLeft.attributeValues.wisdomAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialWisdom() + this.inventory.equippedWeaponRight.CalculateWeaponTypeWisdom() + this.inventory.equippedWeaponRight.attributeValues.wisdomAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialWisdom() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeWisdom() + this.inventory.equippedWeaponLeft.attributeValues.wisdomAtt;
         return total;
     }
 
     public override int CalculateEntityFocusFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialFocus() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeFocus() + this.entityInventory.equippedWeaponRight.attributeValues.focusAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialFocus() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeFocus() + this.entityInventory.equippedWeaponLeft.attributeValues.focusAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialFocus() + this.inventory.equippedWeaponRight.CalculateWeaponTypeFocus() + this.inventory.equippedWeaponRight.attributeValues.focusAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialFocus() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeFocus() + this.inventory.equippedWeaponLeft.attributeValues.focusAtt;
         return total;
     }
 
     public override int CalculateEntityCharismaFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialCharisma() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeCharisma() + this.entityInventory.equippedWeaponRight.attributeValues.charismaAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialCharisma() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeCharisma() + this.entityInventory.equippedWeaponLeft.attributeValues.charismaAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialCharisma() + this.inventory.equippedWeaponRight.CalculateWeaponTypeCharisma() + this.inventory.equippedWeaponRight.attributeValues.charismaAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialCharisma() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeCharisma() + this.inventory.equippedWeaponLeft.attributeValues.charismaAtt;
         return total;
     }
 
     public override int CalculateEntityLuckFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialLuck() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeLuck() + this.entityInventory.equippedWeaponRight.attributeValues.luckAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialLuck() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeLuck() + this.entityInventory.equippedWeaponLeft.attributeValues.luckAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialLuck() + this.inventory.equippedWeaponRight.CalculateWeaponTypeLuck() + this.inventory.equippedWeaponRight.attributeValues.luckAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialLuck() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeLuck() + this.inventory.equippedWeaponLeft.attributeValues.luckAtt;
         return total;
     }
 
     public override int CalculateEntityMindFromWeapons()
     {
         int total = 0;
-        total = this.entityInventory.equippedWeaponRight.CalculateMaterialMind() + this.entityInventory.equippedWeaponRight.CalculateWeaponTypeMind() + this.entityInventory.equippedWeaponRight.attributeValues.mindAtt;
-        total += this.entityInventory.equippedWeaponLeft.CalculateMaterialMind() + this.entityInventory.equippedWeaponLeft.CalculateWeaponTypeMind() + this.entityInventory.equippedWeaponLeft.attributeValues.mindAtt;
+        total = this.inventory.equippedWeaponRight.CalculateMaterialMind() + this.inventory.equippedWeaponRight.CalculateWeaponTypeMind() + this.inventory.equippedWeaponRight.attributeValues.mindAtt;
+        total += this.inventory.equippedWeaponLeft.CalculateMaterialMind() + this.inventory.equippedWeaponLeft.CalculateWeaponTypeMind() + this.inventory.equippedWeaponLeft.attributeValues.mindAtt;
         return total;
     }
 
     public override int CalculateEntityStrengthFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialStrength() + this.entityInventory.equippedChestArmour.CalculateMaterialStrength() + this.entityInventory.equippedHandArmour.CalculateMaterialStrength() + this.entityInventory.equippedLegArmour.CalculateMaterialStrength() + this.entityInventory.equippedFeetArmour.CalculateMaterialStrength();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.strengthAtt + this.entityInventory.equippedChestArmour.attributeValues.strengthAtt + this.entityInventory.equippedHandArmour.attributeValues.strengthAtt + this.entityInventory.equippedLegArmour.attributeValues.strengthAtt + this.entityInventory.equippedFeetArmour.attributeValues.strengthAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialStrength() + this.inventory.equippedChestArmour.CalculateMaterialStrength() + this.inventory.equippedHandArmour.CalculateMaterialStrength() + this.inventory.equippedLegArmour.CalculateMaterialStrength() + this.inventory.equippedFeetArmour.CalculateMaterialStrength();
+        total += this.inventory.equippedHeadArmour.attributeValues.strengthAtt + this.inventory.equippedChestArmour.attributeValues.strengthAtt + this.inventory.equippedHandArmour.attributeValues.strengthAtt + this.inventory.equippedLegArmour.attributeValues.strengthAtt + this.inventory.equippedFeetArmour.attributeValues.strengthAtt;
         return total;
     }
 
     public override int CalculateEntityDexterityFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialDexterity() + this.entityInventory.equippedChestArmour.CalculateMaterialDexterity() + this.entityInventory.equippedHandArmour.CalculateMaterialDexterity() + this.entityInventory.equippedLegArmour.CalculateMaterialDexterity() + this.entityInventory.equippedFeetArmour.CalculateMaterialDexterity();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.dexterityAtt + this.entityInventory.equippedChestArmour.attributeValues.dexterityAtt + this.entityInventory.equippedHandArmour.attributeValues.dexterityAtt + this.entityInventory.equippedLegArmour.attributeValues.dexterityAtt + this.entityInventory.equippedFeetArmour.attributeValues.dexterityAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialDexterity() + this.inventory.equippedChestArmour.CalculateMaterialDexterity() + this.inventory.equippedHandArmour.CalculateMaterialDexterity() + this.inventory.equippedLegArmour.CalculateMaterialDexterity() + this.inventory.equippedFeetArmour.CalculateMaterialDexterity();
+        total += this.inventory.equippedHeadArmour.attributeValues.dexterityAtt + this.inventory.equippedChestArmour.attributeValues.dexterityAtt + this.inventory.equippedHandArmour.attributeValues.dexterityAtt + this.inventory.equippedLegArmour.attributeValues.dexterityAtt + this.inventory.equippedFeetArmour.attributeValues.dexterityAtt;
         return total;
     }
 
     public override int CalculateEntityConstitutionFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialConstitution() + this.entityInventory.equippedChestArmour.CalculateMaterialConstitution() + this.entityInventory.equippedHandArmour.CalculateMaterialConstitution() + this.entityInventory.equippedLegArmour.CalculateMaterialConstitution() + this.entityInventory.equippedFeetArmour.CalculateMaterialConstitution();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.constitutionAtt + this.entityInventory.equippedChestArmour.attributeValues.constitutionAtt + this.entityInventory.equippedHandArmour.attributeValues.constitutionAtt + this.entityInventory.equippedLegArmour.attributeValues.constitutionAtt + this.entityInventory.equippedFeetArmour.attributeValues.constitutionAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialConstitution() + this.inventory.equippedChestArmour.CalculateMaterialConstitution() + this.inventory.equippedHandArmour.CalculateMaterialConstitution() + this.inventory.equippedLegArmour.CalculateMaterialConstitution() + this.inventory.equippedFeetArmour.CalculateMaterialConstitution();
+        total += this.inventory.equippedHeadArmour.attributeValues.constitutionAtt + this.inventory.equippedChestArmour.attributeValues.constitutionAtt + this.inventory.equippedHandArmour.attributeValues.constitutionAtt + this.inventory.equippedLegArmour.attributeValues.constitutionAtt + this.inventory.equippedFeetArmour.attributeValues.constitutionAtt;
         return total;
     }
 
     public override int CalculateEntityIntelligenceFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedChestArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedHandArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedLegArmour.CalculateMaterialIntelligence() + this.entityInventory.equippedFeetArmour.CalculateMaterialIntelligence();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.intelligenceAtt + this.entityInventory.equippedChestArmour.attributeValues.intelligenceAtt + this.entityInventory.equippedHandArmour.attributeValues.intelligenceAtt + this.entityInventory.equippedLegArmour.attributeValues.intelligenceAtt + this.entityInventory.equippedFeetArmour.attributeValues.intelligenceAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialIntelligence() + this.inventory.equippedChestArmour.CalculateMaterialIntelligence() + this.inventory.equippedHandArmour.CalculateMaterialIntelligence() + this.inventory.equippedLegArmour.CalculateMaterialIntelligence() + this.inventory.equippedFeetArmour.CalculateMaterialIntelligence();
+        total += this.inventory.equippedHeadArmour.attributeValues.intelligenceAtt + this.inventory.equippedChestArmour.attributeValues.intelligenceAtt + this.inventory.equippedHandArmour.attributeValues.intelligenceAtt + this.inventory.equippedLegArmour.attributeValues.intelligenceAtt + this.inventory.equippedFeetArmour.attributeValues.intelligenceAtt;
         return total;
     }
 
     public override int CalculateEntityWisdomFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialWisdom() + this.entityInventory.equippedChestArmour.CalculateMaterialWisdom() + this.entityInventory.equippedHandArmour.CalculateMaterialWisdom() + this.entityInventory.equippedLegArmour.CalculateMaterialWisdom() + this.entityInventory.equippedFeetArmour.CalculateMaterialWisdom();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.wisdomAtt + this.entityInventory.equippedChestArmour.attributeValues.wisdomAtt + this.entityInventory.equippedHandArmour.attributeValues.wisdomAtt + this.entityInventory.equippedLegArmour.attributeValues.wisdomAtt + this.entityInventory.equippedFeetArmour.attributeValues.wisdomAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialWisdom() + this.inventory.equippedChestArmour.CalculateMaterialWisdom() + this.inventory.equippedHandArmour.CalculateMaterialWisdom() + this.inventory.equippedLegArmour.CalculateMaterialWisdom() + this.inventory.equippedFeetArmour.CalculateMaterialWisdom();
+        total += this.inventory.equippedHeadArmour.attributeValues.wisdomAtt + this.inventory.equippedChestArmour.attributeValues.wisdomAtt + this.inventory.equippedHandArmour.attributeValues.wisdomAtt + this.inventory.equippedLegArmour.attributeValues.wisdomAtt + this.inventory.equippedFeetArmour.attributeValues.wisdomAtt;
         return total;
     }
 
     public override int CalculateEntityFocusFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialFocus() + this.entityInventory.equippedChestArmour.CalculateMaterialFocus() + this.entityInventory.equippedHandArmour.CalculateMaterialFocus() + this.entityInventory.equippedLegArmour.CalculateMaterialFocus() + this.entityInventory.equippedFeetArmour.CalculateMaterialFocus();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.focusAtt + this.entityInventory.equippedChestArmour.attributeValues.focusAtt + this.entityInventory.equippedHandArmour.attributeValues.focusAtt + this.entityInventory.equippedLegArmour.attributeValues.focusAtt + this.entityInventory.equippedFeetArmour.attributeValues.focusAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialFocus() + this.inventory.equippedChestArmour.CalculateMaterialFocus() + this.inventory.equippedHandArmour.CalculateMaterialFocus() + this.inventory.equippedLegArmour.CalculateMaterialFocus() + this.inventory.equippedFeetArmour.CalculateMaterialFocus();
+        total += this.inventory.equippedHeadArmour.attributeValues.focusAtt + this.inventory.equippedChestArmour.attributeValues.focusAtt + this.inventory.equippedHandArmour.attributeValues.focusAtt + this.inventory.equippedLegArmour.attributeValues.focusAtt + this.inventory.equippedFeetArmour.attributeValues.focusAtt;
         return total;
     }
 
     public override int CalculateEntityCharismaFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialCharisma() + this.entityInventory.equippedChestArmour.CalculateMaterialCharisma() + this.entityInventory.equippedHandArmour.CalculateMaterialCharisma() + this.entityInventory.equippedLegArmour.CalculateMaterialCharisma() + this.entityInventory.equippedFeetArmour.CalculateMaterialCharisma();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.charismaAtt + this.entityInventory.equippedChestArmour.attributeValues.charismaAtt + this.entityInventory.equippedHandArmour.attributeValues.charismaAtt + this.entityInventory.equippedLegArmour.attributeValues.charismaAtt + this.entityInventory.equippedFeetArmour.attributeValues.charismaAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialCharisma() + this.inventory.equippedChestArmour.CalculateMaterialCharisma() + this.inventory.equippedHandArmour.CalculateMaterialCharisma() + this.inventory.equippedLegArmour.CalculateMaterialCharisma() + this.inventory.equippedFeetArmour.CalculateMaterialCharisma();
+        total += this.inventory.equippedHeadArmour.attributeValues.charismaAtt + this.inventory.equippedChestArmour.attributeValues.charismaAtt + this.inventory.equippedHandArmour.attributeValues.charismaAtt + this.inventory.equippedLegArmour.attributeValues.charismaAtt + this.inventory.equippedFeetArmour.attributeValues.charismaAtt;
         return total;
     }
 
     public override int CalculateEntityLuckFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialLuck() + this.entityInventory.equippedChestArmour.CalculateMaterialLuck() + this.entityInventory.equippedHandArmour.CalculateMaterialLuck() + this.entityInventory.equippedLegArmour.CalculateMaterialLuck() + this.entityInventory.equippedFeetArmour.CalculateMaterialLuck();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.luckAtt + this.entityInventory.equippedChestArmour.attributeValues.luckAtt + this.entityInventory.equippedHandArmour.attributeValues.luckAtt + this.entityInventory.equippedLegArmour.attributeValues.luckAtt + this.entityInventory.equippedFeetArmour.attributeValues.luckAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialLuck() + this.inventory.equippedChestArmour.CalculateMaterialLuck() + this.inventory.equippedHandArmour.CalculateMaterialLuck() + this.inventory.equippedLegArmour.CalculateMaterialLuck() + this.inventory.equippedFeetArmour.CalculateMaterialLuck();
+        total += this.inventory.equippedHeadArmour.attributeValues.luckAtt + this.inventory.equippedChestArmour.attributeValues.luckAtt + this.inventory.equippedHandArmour.attributeValues.luckAtt + this.inventory.equippedLegArmour.attributeValues.luckAtt + this.inventory.equippedFeetArmour.attributeValues.luckAtt;
         return total;
     }
 
     public override int CalculateEntityMindFromArmour()
     {
         int total = 0;
-        total = this.entityInventory.equippedHeadArmour.CalculateMaterialMind() + this.entityInventory.equippedChestArmour.CalculateMaterialMind() + this.entityInventory.equippedHandArmour.CalculateMaterialMind() + this.entityInventory.equippedLegArmour.CalculateMaterialMind() + this.entityInventory.equippedFeetArmour.CalculateMaterialMind();
-        total += this.entityInventory.equippedHeadArmour.attributeValues.mindAtt + this.entityInventory.equippedChestArmour.attributeValues.mindAtt + this.entityInventory.equippedHandArmour.attributeValues.mindAtt + this.entityInventory.equippedLegArmour.attributeValues.mindAtt + this.entityInventory.equippedFeetArmour.attributeValues.mindAtt;
+        total = this.inventory.equippedHeadArmour.CalculateMaterialMind() + this.inventory.equippedChestArmour.CalculateMaterialMind() + this.inventory.equippedHandArmour.CalculateMaterialMind() + this.inventory.equippedLegArmour.CalculateMaterialMind() + this.inventory.equippedFeetArmour.CalculateMaterialMind();
+        total += this.inventory.equippedHeadArmour.attributeValues.mindAtt + this.inventory.equippedChestArmour.attributeValues.mindAtt + this.inventory.equippedHandArmour.attributeValues.mindAtt + this.inventory.equippedLegArmour.attributeValues.mindAtt + this.inventory.equippedFeetArmour.attributeValues.mindAtt;
         return total;
     }
     #endregion

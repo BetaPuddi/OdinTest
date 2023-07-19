@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca63f0777febc6d4aa953e8d23c7c673, type: 3}
-  m_Name: EmptyComponentMaterial
+  m_Name: BlankComponentMaterial
   m_EditorClassIdentifier: 
   componentMaterialName: 
   materialResourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}

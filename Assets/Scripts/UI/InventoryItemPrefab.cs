@@ -71,16 +71,4 @@ public class InventoryItemPrefab : MonoBehaviour
             }
         }
     }
-
-    private void AssignSortingNumber()
-    {
-        if (inventoryItem.GetType() == typeof(DefinedWeapon))
-        {
-            sortingNumber = 0;
-        }
-        else if (inventoryItem.GetType() == typeof(DefinedArmour))
-        {
-            sortingNumber = 1;
-        }
-    }
 }
