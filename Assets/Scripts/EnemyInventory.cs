@@ -16,7 +16,11 @@ public class EnemyInventory : ScriptableObject
     public ArmourBase equippedHandArmour = null;
     public ArmourBase equippedLegArmour = null;
     public ArmourBase equippedFeetArmour = null;
+    [SerializeField]
+    [Header("Blank Weapon")]
     private WeaponBase blankWeapon;
+    [SerializeField]
+    [Header("Blank Armour")]
     private ArmourBase blankArmour;
 
     public List<InventoryItem> equippedItems = new List<InventoryItem>();
@@ -24,14 +28,47 @@ public class EnemyInventory : ScriptableObject
 
     private void OnValidate()
     {
+        InitializeEquipment();
         UpdateEquippedList();
     }
     void Start()
     {
+        InitializeEquipment();
         UpdateEquippedList();
         /*var emptyItemAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/items/empty");
         emptyWeapon = emptyItemAssetBundle.LoadAsset<WeaponBase>("EmptyWeapon");
         emptyArmour = emptyItemAssetBundle.LoadAsset<ArmourBase>("EmptyArmour");*/
+    }
+    public void InitializeEquipment()
+    {
+        if (equippedWeaponRight == null)
+        {
+            equippedWeaponRight = blankWeapon;
+        }
+        if (equippedWeaponLeft == null)
+        {
+            equippedWeaponLeft = blankWeapon;
+        }
+        if (equippedHeadArmour == null)
+        {
+            equippedHeadArmour = blankArmour;
+        }
+        if (equippedChestArmour == null)
+        {
+            equippedChestArmour = blankArmour;
+        }
+        if (equippedHandArmour == null)
+        {
+            equippedHandArmour = blankArmour;
+        }
+        if (equippedLegArmour == null)
+        {
+            equippedLegArmour = blankArmour;
+        }
+        if (equippedFeetArmour == null)
+        {
+            equippedFeetArmour = blankArmour;
+        }
     }
     public void UpdateEquippedList()
     {

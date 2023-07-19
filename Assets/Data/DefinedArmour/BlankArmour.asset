@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4ac5a3beedd4b4eab2bc3c37f3bee4, type: 3}
+  m_Name: BlankArmour
+  m_EditorClassIdentifier: 
+  itemName: Empty
+  itemDescription: 
+  sortingPosition: 4
+  armourType: 3
+  armourPrice: 0
+  materials:
+  - {fileID: 11400000, guid: 0d38fc987b9ef3644a613f991ff86d88, type: 2}
+  damageTypes:
+  - {fileID: 11400000, guid: 58f85deb7bb02064abf5d93823ef6cbf, type: 2}
+  elements:
+  - {fileID: 11400000, guid: ec1fc60e8b2fcc440a48816093b974ab, type: 2}
+  attackAndDefValues: {fileID: 11400000, guid: 8cbd4e86c283c4f428a27f795a8a3a82, type: 2}
+  attributeValues: {fileID: 11400000, guid: 238b1045f1b9078449f986edfb5152d0, type: 2}
+  resourceValues: {fileID: 11400000, guid: 427655c58061f4046acaf28bf22464ba, type: 2}
+  passives: []

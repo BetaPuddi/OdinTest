@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyEquipmentPanel : MonoBehaviour
 {
-    public Inventory equipment;
+    public EnemyInventory equipment;
     public GameObject equipmentPanel;
     public GameObject equipmentItemPrefab;
     public List<GameObject> equipmentItemPrefabs = new List<GameObject>();

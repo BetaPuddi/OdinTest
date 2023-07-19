@@ -6,7 +6,7 @@ using TMPro;
 public class EnemyItemStatsPanel : MonoBehaviour
 {
     //public GameObject equipLeftWepButton, equipRightWepButton, equipArmourButton, unequipButton;
-    public Inventory enemyInventory;
+    public EnemyInventory enemyInventory;
     public InventoryItem itemToShow; // Item that will be shown in the panel
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
