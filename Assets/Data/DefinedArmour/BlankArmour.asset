@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Empty
   itemDescription: 
-  sortingPosition: 4
-  armourType: 3
+  sortingPosition: 5
+  armourType: 5
   armourPrice: 0
   materials:
   - {fileID: 11400000, guid: 0d38fc987b9ef3644a613f991ff86d88, type: 2}

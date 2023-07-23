@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyInventoryPanel : MonoBehaviour
 {
-    public Enemy enemy = null;
+#nullable enable
+    public Enemy? enemy = null;
+#nullable disable
     public GameObject inventoryPanel;
     public GameObject itemPrefab;
     public EnemyInventory inventory;
@@ -12,13 +14,18 @@ public class EnemyInventoryPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = enemy.inventory;
         UpdateInventory();
         Inventory.OnUpdateUI += UpdateInventory;
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        if (enemy != null)
+        {
+            inventory = enemy.inventory;
+        }
+    }
 
     [ContextMenu("Update Inventory")]
     public void UpdateInventory()

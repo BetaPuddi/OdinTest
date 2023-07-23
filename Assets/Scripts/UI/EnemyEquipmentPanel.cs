@@ -24,13 +24,16 @@ public class EnemyEquipmentPanel : MonoBehaviour
     {
         // Clears equippedItems and then sets each entry in equippedItems to an equipped item in the reference inventory
         equippedItems.Clear();
-        equippedItems.Insert(0, equipment.equippedWeaponRight);
-        equippedItems.Insert(1, equipment.equippedWeaponLeft);
-        equippedItems.Insert(2, equipment.equippedHeadArmour);
-        equippedItems.Insert(3, equipment.equippedChestArmour);
-        equippedItems.Insert(4, equipment.equippedHandArmour);
-        equippedItems.Insert(5, equipment.equippedLegArmour);
-        equippedItems.Insert(6, equipment.equippedFeetArmour);
+        if (equipment != null)
+        {
+            equippedItems.Insert(0, equipment.equippedWeaponRight);
+            equippedItems.Insert(1, equipment.equippedWeaponLeft);
+            equippedItems.Insert(2, equipment.equippedHeadArmour);
+            equippedItems.Insert(3, equipment.equippedChestArmour);
+            equippedItems.Insert(4, equipment.equippedHandArmour);
+            equippedItems.Insert(5, equipment.equippedLegArmour);
+            equippedItems.Insert(6, equipment.equippedFeetArmour);
+        }
 
         // Destroys the existing prefabs
         foreach (GameObject equipmentItem in equipmentItemPrefabs)

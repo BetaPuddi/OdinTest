@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyPanelController : MonoBehaviour
 {
+    public Enemy enemy;
     public GameObject enemyStatsPanel;
     public GameObject enemyInventoryPanel;
     public GameObject enemyEquipmentPanel;
