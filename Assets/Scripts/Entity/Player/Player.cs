@@ -6,6 +6,8 @@ public class Player : Entity
 {
     // Inherits stats and name from Entity
     public Inventory entityInventory;
+    public List<Spell> entitySpells;
+    public List<Technique> entityTechniques;
     void Start()
     {
         this.entityInventory = this.GetComponent<Inventory>();// Get the inventory component attached to the game object

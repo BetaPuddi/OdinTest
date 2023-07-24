@@ -33,7 +33,7 @@ public abstract class WeaponBase : InventoryItem
     //Passive effects of the weapon - Can be passed on from materials
     public List<Passive> passives = new List<Passive>();
     //Replaces the attack command - can be null
-    public Action attackReplacement;
+    public Ability attackReplacement;
 
     public abstract int CalculateMaterialMaxHealth();
     public abstract int CalculateMaterialMaxMana();
