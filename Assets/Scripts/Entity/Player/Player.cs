@@ -6,8 +6,7 @@ public class Player : Entity
 {
     // Inherits stats and name from Entity
     public Inventory entityInventory;
-    public List<Spell> entitySpells;
-    public List<Technique> entityTechniques;
+    public BattleState state;
     void Start()
     {
         this.entityInventory = this.GetComponent<Inventory>();// Get the inventory component attached to the game object
@@ -39,6 +38,15 @@ public class Player : Entity
         this.charisma = CalculateEntityCharismaFromWeapons() + CalculateEntityCharismaFromArmour();
         this.luck = CalculateEntityLuckFromWeapons() + CalculateEntityLuckFromArmour();
         this.mind = CalculateEntityMindFromWeapons() + CalculateEntityMindFromArmour();
+    }
+
+    public IEnumerator ChargeAbility(float chargeTime)
+    {
+        yield return new WaitForSeconds(chargeTime);
+    }
+    public IEnumerator AbilityCooldown(float cooldownTime)
+    {
+        yield return new WaitForSeconds(cooldownTime);
     }
 
     /** Resource Calculations

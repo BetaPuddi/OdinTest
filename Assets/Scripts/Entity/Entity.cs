@@ -6,6 +6,19 @@ public abstract class Entity : MonoBehaviour
 {
     // Base class for all entities. Including players, enemies, etc.
     public string entityName;
+
+    // Battle state
+    public enum BattleState
+    {
+        Idle,
+        Charging,
+        CoolingDown
+    }
+
+    // Lists of abilities learnt
+    public List<WhiteMagicSpell> entityWhiteMagicSpells;
+    public List<Technique> entityTechniques;
+
     // STAT VALUES
     public int maxHealth;
     public int currentHealth;
